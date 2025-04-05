@@ -1,0 +1,367 @@
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+
+
+.marketing-title{
+
+    color: #4D4D4D;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+.marketing-des{
+    color: #717171;
+    font-size: 16px;
+    text-align: center!important;
+    width: 50%;
+}
+
+
+.justification {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.marketing-card{
+position: relative;
+margin: 15px;
+}
+
+.marketing-card-img{
+    width: 100%;
+}
+
+.marketing-card-des{
+    background-color: #F5F7FA;
+    box-shadow: 0 8px 16px #abbed157;
+    position: absolute;
+    bottom: -50px;
+    padding: 20px;
+    width: 90%;
+    left: 5%;
+    border-radius: 8px;
+}
+
+.marketing-cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.marketing-card-des p{
+
+    color: #717171;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.readmore{
+    display: flex;
+    color: #4CAF4F;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.readmore svg{
+
+    margin-left: 16px;
+}
+
+.footer{
+  background-color: #263238;
+
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px !important;
+  /* margin-top: 150px; */
+  flex-wrap: wrap;
+
+}
+.copyright-text{
+  font-size: 14px;
+  color: #F5F7FA;
+  margin-top: 30px;
+}
+
+.social-links{
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-links svg{
+  background-color: #597383;
+  padding: 5px;
+  border-radius: 100%;
+} 
+.footer-links-title{
+  color: #F5F7FA;
+}
+.footer-links-item{
+  color: #F5F7FA;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-title{
+  color: #F5F7FA;
+}
+
+
+.contact-input{
+  background-color: #515B60;
+  border: none;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 8px 5px;
+}
+
+.contact-re{
+  position: relative;
+}
+.contact-re svg{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 12px;
+  top: 41px;
+}
+
+
+.container{
+  padding: 50px 100px;
+}
+
+@media screen and (max-width:768px){
+
+  .container{
+    padding: 0 5px;
+  }
+
+.marketing-card{
+margin-bottom: 65px;
+}
+.readmore {
+  margin-top: 0px;
+}
+
+
+.marketing-card-des{
+
+  padding: 2px 20px;
+}
+
+}
+
+.upperfooter{
+  background-color: #F5F7FA;
+  text-align: center;
+  margin-top: 150px; 
+  padding: 30px 0;
+
+}
+
+.upperfooter h2{
+  font-size: 64px;
+  color: #263238;
+  margin-bottom: 10px;
+  line-height: 56px;
+}
+
+.upperfooter button{
+  display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4CAF4F;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+     color: white;
+    }
+
+.upperfooter button svg{
+  background-color: transparent!important;
+  margin-left: 10px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Helping{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dedede;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.Helping-des-maintitle-black{
+  color: #263238;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.Helping-des-maintitle-green{
+  color: #4CAF4F;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.Helping-des-content{
+  color: #263238;
+  font-size: 16px;
+}
+
+
+.Helping-cards{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.Helping-cards-singlecard{
+  display: flex;
+  margin-bottom: 40px;
+  align-items: center;
+}
+.Helping-cards-singlecard-title{
+  color: #263238;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.Helping-cards-singlecard svg{
+  margin-right: 20px;
+}
+
+
+.tour{
+  width: 350px;
+  height: auto;
+  box-shadow: rgba(42, 87, 161, 0.4) 0px 2px 24px;
+  border-radius: 20px;
+  padding: 5px;
+  position: relative;
+}
+.tour p{
+  display: flex;
+  align-items: center;
+}
+
+.tour svg{
+  margin-right: 5px;
+}
+
+.tours{
+  display: flex;
+  justify-content: space-between;
+}
+.tours-twin{
+  display: flex;
+      justify-content: space-around;
+      margin: 15px 0;
+}
+
+.tour h3{
+  text-align: center;
+  margin-top: 40px;
+  color: #000c83;
+  font-size: 22px;
+}
+
+.tour button{
+  width: 100%;
+  background: #ffce39;
+  border: none;
+  border-radius: 0px 0 20px 20px;
+  padding: 5px;
+
+}
+
+.tour span{
+  background-color: #00a666;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 0 0 16px 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 70px;
+  margin: auto;
+  top: 0;
+  text-align: center;
+}

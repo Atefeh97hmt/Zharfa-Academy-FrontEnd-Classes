@@ -1,0 +1,223 @@
+.heading2 {
+    color: pink;
+}
+
+.bg-pink {
+    background-color: pink;
+}
+
+.change-color {
+    color: red;
+}
+
+#blue-color {
+    color: blue;
+}
+
+h5 {
+    color: green;
+}
+
+.myBgImage {
+    width: 500px;
+    height: 500px;
+    background-color: cornflowerblue;
+    background-image: url(/assets/images/bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    /* background-size: 500px 500px;  */
+
+}
+
+
+/* menu */
+
+/* lessons */
+
+
+input{
+    margin: 10px 0;
+}
+
+
+.btn{
+    border: 1px solid #a0a0a0;
+    padding: 5px 50px;
+    background-color: antiquewhite;
+    margin-top: 50px;
+}
+.border {
+    width: 200px;
+    height: 200px;
+    background-color: #a0a0a0;
+    /* border-width: 10px; */
+    /* border-style: solid; */
+    /* border-style: dotted; */
+    /* border-style: dashed; */
+    /* border-style: double; */
+    /* border-left: none; */
+    /* border-style: groove; */
+    /* border-style: ridge; */
+    /* border-style: inset; */
+    /* border-style: outset; */
+    /* border-color: red; */
+    border: 5px solid blue;
+    border-top-color: black;
+    border-right-width: 50px;
+    border-left-style: dotted;
+}
+
+.border-rad {
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+    /* border-radius: 100%; */
+    border: 1px solid red;
+    /* border-radius: 20px 0px 200px 50px; */
+    border-radius: 20px 50px;
+}
+
+
+.box {
+    background-color: lightblue;
+    border: 2px solid blue;
+    /* border-width: medium; */
+    width: 300px;
+    height: 300px;
+    /* margin: 50px;
+    padding: 50px;  */
+    /* 
+    margin-top: 20px;
+    padding-top: 20px; */
+    /* margin: 20px 30px 50px 100px; */
+    margin: 20px 100px;
+    padding: 50px 10px;
+
+}
+
+
+.static{
+    position: static;
+    border: 2px solid #7a0c0c;
+    padding: 10px;
+}
+
+.relative{
+    border: 2px solid #1c0c7a;
+    padding: 10px;
+    position: relative;
+    left: 50px;
+}
+
+.fixed{
+    border: 2px solid #7a710c;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+.absolute{
+
+    position: absolute;
+}
+
+
+.absolute2{
+    position: absolute;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+    background-color: #a9a0dc;
+    padding: 10px;
+}
+
+
+
+
+
+.span1{
+
+    color: white;
+    background-color: red;
+    padding: 10px;
+    display: block;
+}
+
+.span2{
+    color: white;
+    background-color: rgb(40, 40, 126);
+    padding: 10px;
+    display: block;
+
+}
+
+.div1{
+    color: white;
+    background-color: rgb(0, 56, 3);
+    padding: 10px;
+    display: inline;
+}
+
+.div2{
+    color: rgb(45, 42, 42);
+    background-color: rgb(244, 240, 0);
+    padding: 10px;
+    display: inline;
+}
+
+.box{
+    background-color: rgb(11, 11, 47);
+    width: 150px;
+    height: 150px;
+    color: white;
+    margin: 2px;
+}
+
+.parent-box{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction:row;
+    flex-wrap: wrap-reverse;
+}
+
+.box-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.client{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.svgs{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.client-title{
+    font-size: 25px;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+.client-des{
+    font-size: 12px;
+    color: #5d5d5d;
+}

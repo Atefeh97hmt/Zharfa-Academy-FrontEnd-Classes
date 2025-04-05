@@ -1,0 +1,296 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    font-family: Inter;
+}
+
+.menu{
+    display: flex;
+}
+
+.menuItem{
+    padding: 15px;
+    list-style: none; 
+}
+
+
+.LogIn{
+    border: none;
+    background: none;
+    color: #4CAF4F;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+.myHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F7FA
+}
+
+
+.container{
+    padding: 0 100px;
+}
+
+
+.FirstSection{
+    background-color: #F5F7FA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.FirstSection-img{
+    padding: 50px;
+}
+
+.blackColorText{
+    font-size: 64px;
+    font-weight: 600;
+    color: #4D4D4D;
+    margin: 0;
+}
+
+.GreenColorP{
+    font-size: 64px;
+    font-weight: 600;
+    color: #4CAF4F;
+    margin: 0;
+
+}
+
+.GreenBtn{
+    border: none;
+    background: #4CAF4F;
+    padding: 10px 20px 10px 20px;
+    border-radius: 6px;
+    color: #fff; 
+}
+
+.margin-t{
+    margin-top: 50px;
+}
+
+.Sections-maintitle{
+    color: #4D4D4D;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+}
+
+
+.Section-subtitles{
+    color:#717171;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.Sections-title{
+    text-align: center;
+}
+
+.Clients-logo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.comunity-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.communityCards{
+    box-shadow: 0px 2px 4px #abbed1b6;
+    padding: 10px;
+    text-align: center;
+    margin: 30px;
+    height: 200px;
+}
+
+
+.communityCards_title{
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
+    color: #4D4D4D;
+}
+
+.communityCards-content{
+    font-size: 14px;
+    line-height: 20px;
+    color: #717171;
+}
+
+.section-margin{
+    margin: 80px 0;
+}
+
+.unseen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+footer{
+    background-color: #1d1d1d;
+    padding: 100px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media svg{
+
+    background-color: #494949;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.social-media{
+    margin-top: 50px;
+}
+
+.white-p{
+    color: #fff;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.logoimage{
+    margin-bottom: 25px;
+}
+
+
+.footer-links{
+    display: flex;
+    color: white;
+    flex-direction: column;
+}
+
+.footer-links h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-links a{
+    color: #fff;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-links input{
+background-color: #717171;
+padding: 10px;
+border-radius: 10px;
+}
+
+
+.footer-links input::placeholder{
+color: #fff;
+
+}
+
+.email_input{
+    position: relative;
+}
+
+
+.email_input svg{
+position: absolute;
+right: 10px;
+top: 10px;
+}
+
+
+
+.image{
+    border: 1px solid red;
+}
+
+
+.img-content{
+    box-shadow: 5px 5px 5px #8f8f8f;
+    border: 1px solid #8f8f8f;
+    width: 250px;
+    padding: 20px;
+    position: absolute;
+    bottom: -38px;
+    left: 70px;
+    z-index: 10;
+    background: #fff;
+}
+
+
+.position-relative{
+    position: relative;
+}
+
+
+.margin-tb{
+    margin-bottom: 200px;
+}
+
+.flex
+{
+    display: flex
+}
+
+.title{
+    color: #4CAF4F;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

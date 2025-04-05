@@ -1,0 +1,30 @@
+.box{
+    width: 250px;
+    height: 250px;
+    background-color: #2a4ebb;
+}
+
+.container{
+
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.box1{
+transform: translate(50px, 50px);
+}
+
+.box2{
+
+    transform: scale(0.5);
+}
+
+.box3{
+    transform: rotate(40deg);
+}
+
+.box4{
+    transform: skew(30deg, 20deg);
+}
