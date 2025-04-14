@@ -101,7 +101,8 @@ case "D":
 default:
     console.log("your grade is reject");
 
-
-
-
  }
+
+
+ 
+
