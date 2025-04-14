@@ -6,6 +6,12 @@
 } */
 
 
+ .bg-light{
+    background-color: #c4ffeb;
+    color: black;
+} 
+
+
 
 p{
     color: cornflowerblue;
@@ -17,4 +23,18 @@ p{
 
 #heading3{
     color: green;
+}
+
+
+.myfont{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blueviolet;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.mytext{
+    color: #000000;
+    text-align: justify;
 }
