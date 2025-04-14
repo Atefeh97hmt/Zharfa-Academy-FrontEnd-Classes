@@ -38,3 +38,10 @@ p{
     color: #000000;
     text-align: justify;
 }
+
+
+.mahtabstext{
+    color: aqua;
+    background-color: darkblue;
+    text-align: center;
+}
