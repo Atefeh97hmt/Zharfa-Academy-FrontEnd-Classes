@@ -1,0 +1,31 @@
+/* selector{
+    property : value;
+} */
+
+
+
+/* this part is for ... styling */
+
+a{
+    color: orange;
+}
+
+.title{
+   color: cornflowerblue; 
+}
+
+.heading2{
+    color: deeppink;
+}
+
+
+
+.heading2{
+    color: rgb(130, 90, 17);
+    color: #825a11;
+}
+
+
+#my-p{
+    color: blueviolet;
+}
