@@ -63,3 +63,61 @@ if (score > 17){
 else{
     console.log("bad")
 }
+
+
+
+// let x = 2;
+
+// const a = "ali";
+
+
+let day = "yekshanbeh222";
+
+switch (day){
+
+    case "shanbeh":
+    console.log("aval hafteh");
+    break;
+
+    case "yekshanbeh":
+    console.log("dovom hafteh");
+    break;
+
+
+    case "doshanbeh":
+        console.log("sevom hafteh");
+        break;
+
+        default:
+            console.log("akhar hafteh");
+
+}
+
+
+let temp = 18;
+
+switch (true){
+
+case (temp < 0):
+    console.log("kheyli sard");
+
+    break;
+
+    case (temp >= 0 && temp <20):
+        console.log("sard");
+        break;
+
+        case (temp >= 30):
+            console.log("garm");
+            break;
+
+            default:
+                console.log("motdel");
+    
+}
+
+
+
+
+
+
