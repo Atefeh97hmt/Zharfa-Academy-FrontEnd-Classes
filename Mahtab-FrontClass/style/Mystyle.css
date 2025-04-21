@@ -45,3 +45,77 @@ p{
     background-color: darkblue;
     text-align: center;
 }
+
+
+.square{
+    width: 250px;
+    height: 250px;
+    background-color: #46d4ff;
+}
+
+
+.bg-img{
+width: 500px;
+height: 600px;
+/* background-color: aqua; */
+background-image: url(/Mahtab-FrontClass/image/nature.jpg);
+/* background-repeat: repeat; */
+/* background-repeat: no-repeat; */
+/* background-repeat: repeat-x; */
+/* background-repeat: repeat-y; */
+background-repeat: no-repeat;
+background-color: #84bfff;
+/* top right left bottom:  */
+/* background-position: top right; */
+/* background-position: right bottom; */
+background-position: center;
+}
+
+
+.Mycard{
+    background-color: #c4ffeb;
+    width: 400px;
+    height: auto;
+    border: 4px dotted #ae1c1c;
+}
+
+.Mycard img{
+    width: 100%;
+    border: 3px solid blue;
+}
+
+
+.border{
+/* border-width: 10px; */
+/* border-style: dotted; */
+/* border-style: dashed; */
+/* border-style: solid; */
+/* border-color: #ae1c1c; */
+border: 5px solid #ae1c1c;
+width: 250px;
+height: 250px;
+border-radius: 15px;
+}
+
+.border2{
+    width: 200px;
+    height: 200px;
+    background-color: #e7b9ff;
+    /* border: 2px solid #430963; */
+    border-right: 5px solid red;
+    border-bottom: 5px solid blue;
+    border-left: 10px dotted black;
+    border-top: 6px double #6bc814;
+}
+
+
+
+.myBorder{
+
+    width: 300px;
+    height: 200px;
+    border: medium solid #d12643;
+    text-align: center;
+    border-radius: 10px 50px 100px 0px; 
+    /* border-radius: 20px 100px; */
+}
