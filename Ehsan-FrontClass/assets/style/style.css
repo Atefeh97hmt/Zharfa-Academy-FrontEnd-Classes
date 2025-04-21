@@ -29,3 +29,30 @@ a{
 #my-p{
     color: blueviolet;
 }
+
+
+.square{
+    width: 450px;
+    height: auto;
+    background-color: blue;
+    color: white;
+}
+
+
+.highlight{
+    background-color: yellow;
+}
+
+.square h2{
+    color: aqua;
+}
+
+
+.myCard{
+    width: 500px;
+    height: 500px;
+    background-image: url(/Ehsan-FrontClass/assets/images/nature.jpg);
+    background-repeat: no-repeat;
+    background-color: #c6c6c6;
+    background-position: bottom center;
+}
