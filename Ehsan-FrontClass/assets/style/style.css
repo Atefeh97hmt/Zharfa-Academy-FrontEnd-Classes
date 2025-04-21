@@ -56,3 +56,21 @@ a{
     background-color: #c6c6c6;
     background-position: bottom center;
 }
+
+
+.border{
+    width: 250px;
+    height: 250px;
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: #825a11; */
+    border: 5px solid #825a11; 
+    /* border: 10px dotted #825a11; */
+    /* border: 8px dashed #825a11; */
+    /* border: 8px double #825a11; */
+    /* border: 8px groove #825a11; */
+    /* border: 8px ridge #825a11; */
+    /* border: 8px inset #825a11; */
+    /* border: 8px outset #825a11; */
+    border-radius: 30px;
+}
