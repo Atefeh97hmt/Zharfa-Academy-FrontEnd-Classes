@@ -109,11 +109,16 @@ margin: 0 150px;
 .box2{
 
     border: 2px dotted red;
-    background-color: #ffdddd;
+    /* background-color: #ffdddd; */
     width: 300px;
     height: 300px;
     /* padding: 20px; */
     margin: 20px;
+
+   /* background-image: linear-gradient(to top, red, yellow, blue, green, violet, pink); */
+    /* background-image: radial-gradient(circle, red, #fdaaaa); */
+    /* background-image: radial-gradient(circle, red, #961a1a, #d17e7e, #d8bdbd); */
+    background-image: linear-gradient(to right, red 0%, yellow 50%, green 100%);
 }
 
 .box2 img{
