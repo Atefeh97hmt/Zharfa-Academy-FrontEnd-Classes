@@ -158,19 +158,85 @@ for (let i = 1; i <= 5; i++){
 }
 
 
+// array
+
+// 1
+let fruits = ["watermelon", "banana", "apple"];
+
+console.log(fruits[0]);
+
+fruits[1]= "orange";
+console.log(fruits);
+
+fruits[2] = "grape"
+console.log (fruits);
+
+// 2
+let colors = new Array("red", "blue", "green", "white");
+console.log(colors);
+
+colors[3]="black";
+console.log(colors);
+
+console.log(colors.length);
+
+
+let nums = [1, 2];
+nums.push(3);
+console.log(nums);
+
+nums.push(4);
+console.log(nums);
+
+nums.pop();
+console.log(nums);
+
+
+nums.unshift("50");
+console.log(nums);
+
+nums.shift();
+console.log(nums);
+
+
+
+let cities = ["Tehran", "shiraz", "yazd", "alborz", "tabriz"]
+console.log(cities);
+
+cities.push("isfahan");
+console.log(cities)
+
+cities.shift();
+console.log(cities)
 
 
 
 
 
+let numbers = [2, 5, 8, 9, 1, 6]
+console.log(numbers);
+
+numbers.sort();
+console.log(numbers);
+
+numbers.reverse();
+console.log(numbers);
 
 
+let fruitss = ["apple", "banana", "cherry"];
+let result = fruitss.join("-");
+console.log(fruitss);
+console.log(result);
 
 
+let names = ["ali", "majid", "davood", "behzad"]
+console.log(names);
 
+names.sort();
+console.log(names)
 
-
-
-
-
+let boys = "Ali,Reza,Koroush"
+let boyss = boys.split(",");
+console.log(boys);
+console.log(boyss);
 
