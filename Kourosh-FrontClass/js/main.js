@@ -294,8 +294,19 @@ console.log(` product name: ${product.name}, price: ${product.price} `);
 
 
 
+let teacher = {
+    name: "koroush",
+    age: 25,
+    city: "tehran",
+    course: "javascript"
+}
 
+// for in
 
+for (let key in teacher){
+    console.log(key);
+    console.log (teacher[key]);
+}
 
 
 
