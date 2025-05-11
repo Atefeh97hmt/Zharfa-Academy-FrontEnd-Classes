@@ -309,6 +309,21 @@ for (let key in teacher){
 }
 
 
+let car = {
+ name:"pride",
+ color: "gray",
+ year: "2012",
+ motorModel:"6s",
+ price: 500,
+ plak:{
+    city: "rasht",
+    oddEven: "even",
+    harf: "alef",
+    number: 44,
+ }
+}
 
+console.log(car.plak.oddEven);
+console.log(car.plak.city);
 
 
