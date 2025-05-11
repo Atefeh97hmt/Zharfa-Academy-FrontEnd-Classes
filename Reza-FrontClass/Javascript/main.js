@@ -145,6 +145,56 @@ console.log(` esm mahsole: ${product.name} ,  price: ${product.price} `)
 
 
 
+// for loop
+
+// for (start; condition; change){
+//     code
+// }
+
+// 1 to 5
+for (let i=1; i<=5; i++){
+    console.log(i);
+};
 
 
+for(let m=1; m<=10; m++)
+{
+    console.log(m);
+
+
+};
+
+// for (let n = 5; n >= 1; n--){
+//      console.log(i);
+//  }
+
+
+for (let n = 10; n>=0; n--){
+     console.log(n)
+};
+
+
+// while
+
+// while (condition) {
+//     code
+// }
+
+let i = 1;
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+
+let person2 ={
+    family:"rezaei",
+    age:25,
+    city:"tehran"
+}
+
+
+for(let key in person2){
+    console.log(key + ":" + person2[key])
+}
 
