@@ -82,19 +82,66 @@ let names = str.split(",");
 console.log(names);
 
 
+// object
+// key:value
+
+
+let person = {
+name: "ali",
+age: 25,
+isStudent:true,
+}
+
+
+// dot notation
+
+console.log(person.name);
+console.log(person.age);
+
+
+// bracket notation
+console.log(person["name"])
+
+
+person.age = 30;
+person.name="reza";
+// person["name"] = "reza";
+console.log(person)
+
+
+person.city = "tehran";
+person["job"] = "developer";
+
+console.log(person)
 
 
 
+delete person.isStudent;
+console.log (person);
 
 
+let student ={
+    name:"sara",
+    age: 20,
+    address: {
+        city: "shiraz",
+        postalcode:"123456"
+    }
+};
+
+console.log(student.address.city);
 
 
+let product ={
 
+name:"laptop",
+price:200000,
+isAvailable: true,
 
+}
 
-
-
-
+console.log("product name: product.name , price: product.price");
+console.log(` esm mahsole: ${product.name} ,  price: ${product.price} `)
 
 
 
