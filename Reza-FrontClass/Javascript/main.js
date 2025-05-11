@@ -186,7 +186,8 @@ while (i <= 5) {
     i++;
 }
 
-
+  
+// for in
 let person2 ={
     family:"rezaei",
     age:25,
@@ -198,3 +199,9 @@ for(let key in person2){
     console.log(key + ":" + person2[key])
 }
 
+// for of
+
+let fruits2 = ["apple", "banana"];
+for (let fruit of fruits2){
+    console.log(fruit)
+}
