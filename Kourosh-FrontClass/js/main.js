@@ -210,9 +210,6 @@ cities.shift();
 console.log(cities)
 
 
-
-
-
 let numbers = [2, 5, 8, 9, 1, 6]
 console.log(numbers);
 
@@ -239,4 +236,68 @@ let boys = "Ali,Reza,Koroush"
 let boyss = boys.split(",");
 console.log(boys);
 console.log(boyss);
+
+// object
+// key:value
+
+let person = {
+name: "Ali",
+age: 25,
+isStudent:true,
+}
+
+// dot notation
+console.log(person.name);
+console.log(person.age);
+
+// bracket notation
+console.log(person["name"]);
+
+
+person.age = 30;
+person.name = "Reza";
+console.log(person);
+
+
+person.city = "terhran";
+person["job"] = "developer";
+console.log(person);
+
+person.gender = "male";
+// person["gender"] ="male";
+console.log(person);
+
+delete person.isStudent;
+console.log(person);
+
+
+let student ={
+   name: "sara",
+   age: 20,
+   address: {
+    city: "shiraz",
+    postalcode:"123456",
+   }
+}
+
+console.log(student.address.city);
+console.log(student.address.postalcode);
+
+
+let product = {
+    name:"laptop",
+    price:20000,
+    isAvailable: true
+}
+
+console.log(` product name: ${product.name}, price: ${product.price} `);
+
+
+
+
+
+
+
+
+
 
