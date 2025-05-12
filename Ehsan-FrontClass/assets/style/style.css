@@ -134,14 +134,66 @@ margin: 0 150px;
 
 
 
+.position{
+
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    margin-top: 20px;
+    /* position: static; */
+    /* position: relative; */
+    position: absolute;
+     top: 0;
+    /* left: 50px;  */
+    right: 50%;
+
+}
+
+
+/* left
+right
+top
+bottom */
 
 
 
+.pos-relative{
+width: 500px;
+height: 500px;
+background-color: #825a11;
+margin-top: 50px;
+position: relative;
+left: 30%;
+}
 
+.pos-absolute{
+    width: 50px;
+    height: 50px;
+    background-color: #e7cd9c;
+    position: absolute;
+    right: 60px;
+    bottom: 20%;
+    }
+    
 
+.fixed{
+    background-color: aquamarine;
+    padding: 20px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
+.myP{
 
+    margin: 300px;
+}
 
-
+.myImg{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
 
 

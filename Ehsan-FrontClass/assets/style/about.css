@@ -1,0 +1,22 @@
+.aboutCard{
+    width: 500px;
+    border: 1px solid #828282;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.aboutCard h2{
+    color: blueviolet;
+}
+
+.lable{
+    position: absolute;
+    background-color: #c7a0eb;
+    width: 50px;
+    height: 10px;
+    padding: 10px;
+    top: 20px;
+    right: -20px;
+    border-radius: 5px 0 0 5px;
+}
