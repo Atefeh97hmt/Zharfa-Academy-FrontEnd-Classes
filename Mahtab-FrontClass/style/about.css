@@ -1,0 +1,30 @@
+
+body{
+    background-color: #cbe7ff;
+    padding: 10px 20px;
+}
+
+.myCart{
+    width: 500px;
+    border: 1px solid #909090;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 0 10px #ff9a9a;
+    background-color: white;
+
+}
+
+.lable{
+    position: absolute;
+    background-color: #9d80b7;
+    padding: 10px 20px;
+    top: 10%;
+    right: -10px;
+    border-radius: 10px 0 0 10px;
+}
+
+.textshadow{
+    text-shadow: 2px 2px 4px rgb(183, 36, 36);
+    margin-bottom: 50px;
+}
