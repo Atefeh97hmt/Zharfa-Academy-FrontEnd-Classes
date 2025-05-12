@@ -28,3 +28,13 @@ body{
     text-shadow: 2px 2px 4px rgb(183, 36, 36);
     margin-bottom: 50px;
 }
+
+
+.lable2{
+    position: absolute;
+    padding: 20px 5px;
+    right: 50px;
+    bottom: 0px;
+    border-radius: 10px 10px 0 0;
+    background-color: #63bcd7;
+}
