@@ -1,0 +1,52 @@
+/* display */
+
+.display{
+    display: block;
+}
+
+.dis-inline{
+    display: inline;
+}
+
+
+.none{
+    display: none;
+}
+
+
+.myCard{
+    width: 250px;
+    height: 200px;
+    border: 1px solid #000000;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 2px;
+}
+
+.myCard-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: burlywood;
+    height: 500px;
+    margin-bottom: 200px;
+    align-items: center;
+
+}
+
+.pink{
+    background-color: #fed3da;
+}
+
+.yellow{
+    background-color: #fff4cf;
+}
+
+.blue{
+    background-color: #cbe7ff;
+}
+
+.green{
+    background-color: #d1ffd1;
+}
