@@ -7,9 +7,48 @@
 </head>
 <body>
     
+    <button onclick="sayHi()">  click me  </button>
+    
+    <div onmouseover="changeText(this)" onmouseout="reserText(this)">    hover me      </div>
+
+    <button onclick="changeStyle(this)"> click me to change my color</button>
 
 
 
+
+
+
+<script>
+    function sayHi(){
+    alert("salaaaaaaaaaaaam")
+    }
+
+
+    function changeText(element){
+        element.innerHTML ="Hi Reza"
+    }
+
+
+   function reserText(element){
+    element.innerHTML = "hover me"
+   }
+
+
+function changeStyle(element)
+{
+
+element.style.backgroundColor ="blue";
+element.style.color="#ffffff";
+element.style.border="5px solid red";
+element.style.fontSize="25px"
+element.innerHTML="my color chnaged"
+
+}
+
+
+
+
+</script>    
    <script src="/Reza-FrontClass/Javascript/function.js"></script> 
 </body>
 </html>
