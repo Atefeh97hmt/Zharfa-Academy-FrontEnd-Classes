@@ -7,12 +7,55 @@
 </head>
 <body>
     
+<style>
+    .btn{
+        background-color: #526540;
+        padding: 20px;
+        border: none;
+        border-radius: 10px;
+    }
+      button{
+        margin: 20px;
+      }
+    </style>
 
 
 
-    
+<button class="btn" onclick="sayHi()">   click me  </button>
+
+<div  onmouseover="changeText(this)" onmouseout="resetText(this)">   hover me    </div>
+
+<button onclick="changeStyle(this)">    click me to change my style  </button>
 
 
-    <script src="/Kourosh-FrontClass/js/function.js"></script>
+
+
+
+<script>
+function sayHi(){
+    alert("salam :))")
+};
+
+
+function changeText(element){
+    element.innerHTML = " hellow  ";
+};
+
+function resetText(element){
+    element.innerHTML = "hover me";
+};
+
+function changeStyle(element){
+    element.style.backgroundColor= "blue";
+    element.style.color="#ffffff";
+    element.style.fontSize="25px";
+    element.innerHTML="my color changed"
+
+}
+
+
+</script>
+
+<script src="/Kourosh-FrontClass/js/function.js"></script>
 </body>
 </html>
