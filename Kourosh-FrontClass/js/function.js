@@ -42,3 +42,12 @@ console.log(isEven(4));
 console.log(isEven(7));
 
 
+// const person ={
+//     name: "ali",
+//     greet: function(){
+//         console.log ("salam" + this.name  );
+//     }
+// };
+// person.greet()
+
+

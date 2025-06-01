@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <style>
+        
+
+.colorfull{
+
+    background-color: #9292f7;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    }
+
+
+.message{
+    font-size: 25px;
+    padding: 50px;
+}
+
+    </style>
+
+
+
+<p id="demo"> hellow world!   </p>
+<button onclick="changeText()">  click </button>
+
+
+<div class="colorfull" id="color">  colorfull  </div>
+<button onclick="changeColor()">  click </button>
+
+<p class="message"> ali  </p>
+
+
+<div class="card">
+    <p class="text">  mohammad </p>
+    <p class="text2">  mohammad </p>
+    <p class="text3">  mohammad </p>
+    <p class="text4">  mohammad </p>
+    <p class="text5">  mohammad </p>
+
+</div>
+
+
+<p id="myid">  text </p>
+
+
+
+<script>
+    
+function changeText(){
+   document.getElementById("demo").innerText="the text changed"
+}
+
+function changeColor(){
+    document.getElementById("color").style.backgroundColor ="red"
+}
+
+
+document.querySelector(".message").style.color ="red"
+document.querySelector(".card .text").style.color ="red"
+document.querySelector("#myid").innerText = "changed"
+
+
+</script>
+
+</body>
+</html>
