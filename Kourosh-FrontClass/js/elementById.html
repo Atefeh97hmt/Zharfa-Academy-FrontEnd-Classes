@@ -43,7 +43,6 @@
     <p class="text3">  mohammad </p>
     <p class="text4">  mohammad </p>
     <p class="text5">  mohammad </p>
-
 </div>
 
 
@@ -51,20 +50,41 @@
 
 
 
+
+<input type="text" placeholder="click on a keyboard key" onkeydown="showKey(event)">
+
+<p id="result"></p>
+
+
+<input onkeyup=" checkEnter(event)" type="text" placeholder="click enter">
+
+
+
+
+
+
 <script>
-    
 function changeText(){
    document.getElementById("demo").innerText="the text changed"
 }
-
 function changeColor(){
     document.getElementById("color").style.backgroundColor ="red"
 }
-
-
 document.querySelector(".message").style.color ="red"
 document.querySelector(".card .text").style.color ="red"
 document.querySelector("#myid").innerText = "changed"
+
+function showKey(e){
+    document.getElementById("result").innerText=` the key clicked ${e.key}`
+}
+
+function checkEnter(e){
+
+if (e.key === "Enter"){
+    alert ("you clicked on Enter key")
+}
+
+}
 
 
 </script>
