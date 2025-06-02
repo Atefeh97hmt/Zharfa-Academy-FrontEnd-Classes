@@ -50,3 +50,46 @@
 .green{
     background-color: #d1ffd1;
 }
+
+
+
+.nature-card{
+
+width: 450px;
+height: auto;
+border: 1px solid #727272;
+/* padding: 12px; */
+/* transform: rotate(10deg); */
+margin: 50px;
+transition: 0.5s; 
+transform: skew(-20deg, 10deg);
+
+
+}
+
+.nature-card img{
+    width: 100%;
+}
+
+.nature-card p{
+    padding: 5px 15px;
+}
+
+.nature-card h3{
+    padding: 5px 15px;
+}
+
+
+.nature-card:hover{
+    background-color: #cef8ff;
+/* transform: scale(0.9); */
+transform: scale(1.1, 0.9);
+transition: 0.5s;
+
+}
+
+.nature-card h3:hover{
+    /* font-weight: bold; */
+
+font-size: 12px;
+}
