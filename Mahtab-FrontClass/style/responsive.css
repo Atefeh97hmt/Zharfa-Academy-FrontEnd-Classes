@@ -1,0 +1,16 @@
+.media{
+    display: flex;
+}
+
+@media screen and (max-width:768px){
+    .media a{
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px)
+{
+.heart{
+    display: none;
+}
+}    
