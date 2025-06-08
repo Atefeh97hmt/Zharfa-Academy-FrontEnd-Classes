@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anime.js انیمیشن با</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111;
+    }
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: #ff4757;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script>
+anime({
+  targets: '.circle',
+  translateX: [
+    { value: 300, duration: 1000 },
+    { value: 0, duration: 1000 }
+  ],
+  scale: [
+    { value: 2, duration: 1000, delay: 200 },
+    { value: 1, duration: 1000 }
+  ],
+  rotate: '1turn',
+  backgroundColor: [
+    { value: '#1e90ff', duration: 1000 },
+    { value: '#ff4757', duration: 1000 }
+  ],
+  easing: 'easeInOutQuad',
+  loop: true
+});
+
+  </script>
+</body>
+</html>
