@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+
+<!-- <button id="myBtn"> click me </button>
+<p id="result"></p> -->
+    
+
+<h1>please press on a key on your keyboard:</h1>
+
+<div id="output"></div>
+
+
+<script>
+// const btn = document.getElementById("myBtn");
+//const result = document.getElementById("result")
+
+//btn.addEventListener("click", function(){
+
+  //  result.innerText="the btn clicked";
+
+//}); 
+
+
+document.addEventListener("keydown", function(event)
+
+{
+const output = document.getElementById("output");
+output.textContent = ` you press "${event.key} `;
+
+}
+);
+
+
+
+
+</script>
+
+</body>
+</html>
