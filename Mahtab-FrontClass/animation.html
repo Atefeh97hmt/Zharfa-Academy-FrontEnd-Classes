@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+</head>
+<body>
+    
+<div class="box"></div>
+<div class="box2"></div>
+<div class="circle">  </div>
+<div class="text">     Hellow Mahtab  </div>
+
+<div class="box3"></div>
+
+
+
+<div class="shape"></div>
+
+<style>
+
+   /* body{
+background-image: url(/Mahtab-FrontClass/image/nature.jpg);
+    } */
+
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: background-color 1s;
+        animation: moveRight 2s infinite;
+    }
+
+    .box:hover{
+        background-color: green;
+    }
+
+@keyframes moveRight {
+    from {transform: translateX(0);}
+    to {transform: translateX(200px);}
+   /*from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);} */
+    
+}
+
+@keyframes colorChange {
+    0% {background-color: pink;}
+    30% {background-color: blue;}
+    60% {background-color: green;}
+    100% {background-color: aqua;}
+}
+
+
+.box2{
+    width: 200px;
+    height: 200px;
+    animation: colorChange 3s infinite;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+    margin-top: 20px;
+    border-radius: 100%;
+    animation:growShrink 2s ;
+}
+
+@keyframes growShrink {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.5);}
+    100%{transform: scale(1);}
+}
+
+.text{
+    font-size: 24px;
+    margin: 20px;
+    animation: wave 2s infinite;
+}
+
+
+@keyframes wave {
+    0%{transform: translateX(0);}
+    50%{transform:translateX(-20px)}
+    100%{ transform: translateX(0);}
+}
+
+
+
+.box3{
+    width: 200px;
+    height: 200px;
+    background-color: crimson;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {opacity: 1;}
+    50%{opacity: 0;}
+}
+
+@keyframes shape {
+    0%, 100% {border-radius: 0; background: orange;}
+    50%{border-radius: 100%; background: purple;}
+}
+
+
+.shape{
+    width: 100px;
+    height: 100px;
+    animation: shape 5s infinite;
+    margin: 30px;
+}
+
+
+</style>
+
+
+
+</body>
+</html>
