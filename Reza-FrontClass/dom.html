@@ -48,6 +48,14 @@
 
 
 
+
+
+<input placeholder="what is your name?" id="nameInput2">
+<p id="output2">  </p>
+
+
+
+
 <script>
 
 //let paragraph = document.getElementById("myText");
@@ -77,6 +85,7 @@ document.body.appendChild(newP);
 let oldP = document.getElementById("myText2");
 oldP.remove();
 
+//element.addEventListener("event", function )
 
 let btn = document.getElementById("myBtn");
 let container = document.getElementById("container2");
@@ -100,6 +109,12 @@ btn2.addEventListener("click", function(){
 })
 
 
+let input2 =document.getElementById("nameInput2");
+let output2 = document.getElementById("output2");
+
+input2.addEventListener("input", function(){
+    output2.innerText= input2.value;
+})
 
 
 </script>
