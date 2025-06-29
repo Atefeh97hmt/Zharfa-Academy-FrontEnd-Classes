@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom </title>
+</head>
+<body>
+    
+
+<style>
+
+    .colorfull{
+        width: 300px;
+        height: 300px;
+        background-color: blue;
+        margin: 20px;
+    }
+</style>
+
+
+<p class=""  id="myText">  hi world</p>
+<button onclick="changeText()">click to change text</button>
+
+
+
+
+<div id="color" class="colorfull"> colorfull</div>
+<button onclick="changeColor()" >click</button>
+
+
+
+<p class="name">  ali </p>
+<p class="name2" id="name2"> reza</p>
+
+
+<script>
+
+//let paragraph = document.getElementById("myText");
+//console.log(paragraph);
+
+function changeText(){
+ document.getElementById("myText").innerText="reza";
+}
+
+
+function changeColor(){
+    document.getElementById("color").style.backgroundColor="red";
+    document.getElementById("color").style.width="100px"
+    document.getElementById("color").style.height="100px"
+}
+
+document.querySelector(".name").style.color="red"
+document.querySelector("#name2").style.backgroundColor="yellow"
+
+</script>
+
+</body>
+</html>
