@@ -45,6 +45,21 @@ const car1= new Car ("Honda", "red");
 car1.drive();
 
 
+class Rectangle{
+    constructor (width, height, color){
+        this.width= width;
+        this.height = height;
+        this.color = color;
+    }
+
+    calculateSurface(){
+        return this.width * this.height;
+    }
+
+}
+
+const rect1 = new Rectangle(10, 6, "blue")
+console.log(` the ${rect1.color} rectangle,s area is ${rect1.calculateSurface()}`);
 
 </script>
 
