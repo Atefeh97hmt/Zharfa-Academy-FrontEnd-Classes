@@ -8,7 +8,10 @@
 <body>
     
 <div class="box"></div>
-
+<div class="box2"></div>
+<div class="circle"></div>
+<div class="color-box"></div>
+<div class="box3"></div>
 <style>
     .box{
         width: 200px;
@@ -27,7 +30,139 @@
 
 
 
+
+ /* @keyframes animation-name {
     
+    from{
+
+    }
+
+    to{
+
+
+    }
+
+}
+
+@keyframes animation-name {
+    
+    0%{
+
+    }
+
+    50%{
+
+        
+    }
+    100%{
+
+        
+    }
+
+}
+*/
+
+
+
+@keyframes moveRight {
+    
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(200px);
+    }
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    margin-top: 10px;
+    animation: moveRight 2s;
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: crimson;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.color-box{
+    width: 200px;
+    height: 200px;
+    animation: colorChange 3s infinite;
+
+}
+
+
+@keyframes colorChange {
+    0%{
+        background-color: red;
+    }
+    20%{
+        background-color: orange;
+
+    }
+    40%{
+        background-color: indigo;
+
+    }
+    60%{
+       background-color: yellow;
+    }
+    80%{
+        background-color: blue;
+     }
+    100%{
+        background-color: green;
+    }
+}
+
+
+.box3{
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    animation: rotateScale 4s infinite;
+    margin-left: 50px;
+}
+
+
+@keyframes rotateScale {
+    0%{
+     transform: rotate(0deg) scale(1);
+    }
+
+    50%{ 
+        transform: rotate(180deg) scale(1.5);
+
+    }
+
+    100%{
+        transform: rotate(360deg) scale(1);
+
+    }  
+    
+}
+
 </style>
 
 </body>
