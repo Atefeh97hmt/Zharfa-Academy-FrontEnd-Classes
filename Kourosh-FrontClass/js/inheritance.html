@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        class Animal {
+            constructor(name){
+                this.name = name;
+            }
+        speak(){
+            console.log(`${this.name} makes a sound.` );
+        }
+
+        }
+
+     class Dog extends Animal{
+    speak(){
+        console.log(`${this.name} barks.`)
+    }
+
+     }
+     const dog1 = new Dog("Rex");
+     dog1.speak();
+
+
+
+
+     class Person {
+        constructor(name, age){
+            this.name = name;
+            this.age =age;
+
+        }
+     }
+
+
+     class Teacher extends Person{
+
+        constructor (name, age, subject){
+            super(name, age);
+            this.subject = subject;
+        }
+        teach(){
+            console.log ("teacher is teaching")
+        }
+     }
+
+    const teacher1 = new Teacher("hemmati", "28", "programing");
+    
+    teacher1.teach();
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
