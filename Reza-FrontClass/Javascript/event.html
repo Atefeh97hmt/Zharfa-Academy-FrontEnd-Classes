@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body>
+    
+<button id="btnClick"> please click  </button>
+<div id="box" style="width: 100px; height:100px; background:#ddd; margin-top:10px"> double click</div>
+
+
+<p> please click on a key on your keyboard </p>
+<p id="keyInfo">   </p>
+
+
+<script>
+
+const btn = document.getElementById('btnClick');
+
+btn.addEventListener('click', () => alert("the btn clicked") );
+
+const box = document.getElementById("box");
+box.addEventListener("dblclick", () => {
+
+    box.style.background = "red";
+})
+
+//mousedown
+//mouseup
+
+
+document.addEventListener("keydown", (e) =>{
+
+    document.getElementById('keyInfo').textContent = ` you clicked ${e.key}`;
+})
+
+//keyup
+
+</script>
+
+</body>
+</html>
