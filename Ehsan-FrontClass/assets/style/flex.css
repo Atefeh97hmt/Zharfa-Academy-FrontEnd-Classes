@@ -6,7 +6,7 @@
     flex-direction: column-reverse; */
     justify-content:space-evenly;
     background-color: #d8e0ff;
-    height: 150px;
+    height: 350px;
     align-items:center;
     flex-wrap: wrap;
 }
@@ -14,11 +14,57 @@
 
 
 .num{
-width: 50px;
-height: 50px;
+width: 200px;
+height: 200px;
 background-color: #3d5bf0;
 color: white;
 display: flex;
 justify-content: center;
 align-items: center;
+}
+
+
+
+.card{
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+}
+
+
+.card-img{
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.card-title{
+    color: crimson;
+    font-size: 18px;
+}
+
+.card-dec{
+    color: #333;
+    font-size: 13px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.lable{
+    background-color: #ffd2e6;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
