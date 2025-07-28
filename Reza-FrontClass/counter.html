@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<body>
+    
+<style>
+    body{
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+
+    }
+
+
+.counter-container{
+    background-color: white;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+</style>
+
+<div class="counter-container">
+
+<h1>counter app</h1>
+<div class="count" id="count"> 0 </div>
+<button class="decrease" onclick="changeCount(-1)">  <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12H15" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> </button>
+<button class="reset" onclick="resetCount()">reset</button>
+<button class="increase" onclick="changeCount(1)"><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11 17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H13V7C13 6.44771 12.5523 6 12 6C11.4477 6 11 6.44771 11 7V11H7C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H11V17Z" fill="#000000"></path> </g></svg></button>
+
+</div>
+
+
+<script>
+let count = 0;
+
+function updateDisplay(){
+document.getElementById("count").textContent = count;
+
+}
+
+function changeCount(value){
+    count += value;
+    updateDisplay();
+}
+
+
+function resetCount(){
+    count = 0;
+    updateDisplay();
+}
+
+
+
+</script>
+
+</body>
+</html>
