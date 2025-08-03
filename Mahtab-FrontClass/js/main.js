@@ -41,3 +41,30 @@ var person ={
 var isStudent = true;
 console.log(person.name);
 console.log(person.age);
+
+var n = 4;
+var m = 5;
+z = n + m;
+z = n - m;
+z = n * m;
+z = n / m;
+console.log(z)
+
+// var a = 2;
+// a = a + 3;       a+=3;
+// a = a - 3;       a-=3;
+// a = a * 3;       a*=3;
+// a = a / 3;       a/=3;
+
+
+// '123' ==! 123;
+// 3 > 2;
+// 2 < 3;
+// 6>=4
+// 5<=5
+
+
+console.log(typeof "hellow");
+console.log(typeof "56");
+console.log(typeof 98);
+console.log(typeof false);
