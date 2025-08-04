@@ -1,0 +1,106 @@
+body{
+    direction: rtl;
+
+}
+
+
+.menu{
+    display: flex;
+}
+
+
+.menu li{
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+
+.uderProfile{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.uderProfileContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.advertiser{
+    border: 1px solid #b3b3b3;
+    width: 140px;
+    border-radius: 50px;
+    padding: 8px;
+    font-size: 18px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+margin-right: 20px;
+}
+
+
+    .plus{
+        background-color: #36ef4e;
+        padding: 8px;
+        border-radius: 50px;
+    }
+
+
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+
+
+    .nav-left{
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+ .container{
+    padding-left: 100px;
+    padding-right: 100px;
+ }   
+
+
+ .advertiser:hover{
+    background-color: #dcdcdc;
+    cursor: pointer;
+ }
+
+ .logo{
+    display: flex;
+    justify-content: center;
+ }
+
+ .search{
+    width: 450px;
+    border-radius: 50px;
+    padding: 15px 10px;
+    border: none;
+    background-color:#e3e3e3 ;
+ }
+
+
+ .serach-container{
+    position: relative;
+    width: 450px;
+    margin: auto;
+    margin-top: 30px;
+
+ }
+
+
+ 
+ .serach-container svg{
+    position: absolute;
+    left: 0;
+    top: 30%;
+ }
