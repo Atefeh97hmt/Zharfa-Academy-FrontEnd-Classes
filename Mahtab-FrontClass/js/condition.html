@@ -57,6 +57,8 @@ else{
 
 
 
+// the code is for even odd checking
+
 var number = 12;
 if(number %  2 ==0){
     console.log( number + " is even")
@@ -68,29 +70,54 @@ else{
 
 
 
-var number2 = parseInt(prompt('please enter a number'));
+//var number2 = parseInt(prompt('please enter a number'));
 
-if(isNaN(number2)){
-    console.log("the input you enter is not a nnmber")
+//if(isNaN(number2)){
+    ///console.log("the input you enter is not a nnmber")
+//}
+// else if (number2 % 2 == 0){
+   // console.log(number2 + " is even")
+//} else{
+  //  console.log( number2 + " is odd")
+//}
+
+
+for (var i = 0; i < 5; i ++){
+    console.log(i);
 }
- else if (number2 % 2 == 0){
-    console.log(number2 + " is even")
-} else{
-    console.log( number2 + " is odd")
+
+for (var ii = 10; ii >= 0; ii --){
+    console.log(ii);
+}
+
+
+var sum = 0;
+for(var n = 1; n<=10; n++){
+
+    sum += n;
+}
+
+console.log("the sum of 1 to 10 is:", sum);
+
+
+
+for (var x = 0; x< 10; x++){
+    if(x ==3){
+        break;
+    }
+  console.log(x)
 }
 
 
 
+for (var m = 0; m< 10; m++){
 
+    if(m==7){
+        continue;
+    }
 
-
-
-
-
-
-
-
-
+  console.log(m)
+}
 
 
 
