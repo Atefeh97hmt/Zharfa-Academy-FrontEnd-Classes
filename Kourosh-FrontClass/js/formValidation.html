@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+</head>
+<body>
+
+    <style>
+
+        input{
+            width: 50%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+        }
+
+     .error{
+        color: red;
+        margin-top: 3px;
+     }
+
+    </style>
+
+<form id="signupForm" onsubmit="return validateForm()">
+
+<label>
+    full name: 
+    <input type="text" id="fullName" name="fullName">
+    <span class="error" id="fullNameError"></span>
+
+
+</label>
+
+<label>
+    enail: 
+    <input type="email" id="email" name="email">
+    <span class="error" id="emailError"></span>
+
+
+</label>
+
+
+
+<button type="submit">submit</button>
+
+</form>
+
+
+<script>
+
+
+    function validateForm(){
+
+        let isValid = true;
+
+        document.getElementById("fullNameError").textContent="";
+        document.getElementById("emailError").textContent="";
+
+
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById("email").value.trim();
+
+
+
+
+        if(fullName.length < 3){
+            document.getElementById('fullNameError').textContent="your name can not be smaller than 3 characters";
+            let isValid = false;
+
+        }
+      
+       
+        const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        if(!emailPattern.test(email)){
+            document.getElementById("emailError").textContent = "your email is not valid";
+            let isValid = false;
+
+        }
+
+
+
+
+
+        return isValid;
+    }
+
+
+
+</script>
+    
+</body>
+</html>
