@@ -34,14 +34,28 @@
 </label>
 
 <label>
-    enail: 
+    email: 
     <input type="email" id="email" name="email">
     <span class="error" id="emailError"></span>
 
 
 </label>
+<label>
+    phone: 
+    <input type="tel" id="phone" name="phone">
+    <span class="error" id="phoneError"></span>
 
 
+</label>
+
+
+<label>
+    password: 
+    <input type="password" id="password" name="password">
+    <span class="error" id="passwordError"></span>
+
+
+</label>
 
 <button type="submit">submit</button>
 
@@ -57,10 +71,14 @@
 
         document.getElementById("fullNameError").textContent="";
         document.getElementById("emailError").textContent="";
+        document.getElementById("phoneError").textContent="";
+        document.getElementById("passwordError").textContent="";
 
 
         const fullName = document.getElementById('fullName').value.trim();
         const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const password = document.getElementById("password").value.trim();
 
 
 
@@ -80,7 +98,26 @@
         }
 
 
+    const phonePattern = /^(\\+98|0)?9\\d{9}$/;
+        if(!phonePattern.test(phone)){
+            document.getElementById("phoneError").textContent = "your phone is not valid";
+            let isValid = false;
 
+        }
+
+
+        const passwordPattern = /    ^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+])[A-Za-z0-9!@#$%^&*()_+]{8,}$/;
+        if(!passwordPattern.test(phone)){
+            document.getElementById("passwordError").textContent = "your password is not valid";
+            let isValid = false;
+
+        }
+
+
+
+
+
+        //document.getElementById("signupForm").preventDefault();
 
 
         return isValid;
