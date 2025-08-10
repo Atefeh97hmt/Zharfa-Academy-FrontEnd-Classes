@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark & Light</title>
+</head>
+<body>
+    
+<style>
+
+    body{
+        padding: 40px;
+        background-color: white;
+        transition: background-color 0.5s, color 0.5s;
+        color: black;
+    }
+
+   body.dark{
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+   }
+
+
+   button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2a489c;
+   }
+
+
+</style>
+
+
+
+<h2>  theme toggle </h2>
+
+<button id="toggleBtn">  click to change the theme  </button>
+
+
+
+
+<script>
+
+const btn = document.getElementById('toggleBtn');
+
+btn.addEventListener('click', function (){
+    document.body.classList.toggle('dark');
+
+if (document.body.classList.contains('dark')){
+    btn.textContent="light mode";
+
+}  else{
+    btn.textContent="dark mode";
+
+}
+
+
+})
+
+</script>
+
+
+
+</body>
+</html>
