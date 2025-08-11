@@ -85,7 +85,7 @@ margin-right: 20px;
     border-radius: 50px;
     padding: 15px 10px;
     border: none;
-    background-color:#e3e3e3 ;
+    background-color:#ffffff ;
  }
 
 
@@ -104,3 +104,106 @@ margin-right: 20px;
     left: 0;
     top: 30%;
  }
+
+ .car-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+padding-bottom: 100px;
+ }
+
+
+ .car-gallery-item{
+    text-align: center;
+    padding: 0 30px;
+ }
+
+
+ 
+ .car-gallery-item-img{
+width: 200px;
+
+}
+
+
+.car-gallery-item-title{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+
+.padding-t{
+    padding-top: 100px;
+}
+
+
+.bg-gray{
+    background-color: #e6e6e6;
+}
+
+
+/* .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: red;
+} */
+
+
+.section-title{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+
+.service-card{
+
+    background-color: #e1e1e1;
+    height: auto;
+    width: 180px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+
+.service-card img{
+width: 150px;
+height: 150px;
+
+}
+
+
+.service-card-title{
+    font-weight: bold;
+    margin: 20px;
+    font-size: 15px;
+    
+}
+
+
+.service-card-des{
+    margin: 5px;
+    font-size: 12px;
+    
+}
+
+
+
+.service-card:hover{
+background-color: #e0e0fd;
+outline: 1px solid blue;
+
+}
+
+
+.services{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+}
