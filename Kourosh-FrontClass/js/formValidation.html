@@ -85,7 +85,7 @@
 
         if(fullName.length < 3){
             document.getElementById('fullNameError').textContent="your name can not be smaller than 3 characters";
-            let isValid = false;
+            isValid = false;
 
         }
       
@@ -93,23 +93,23 @@
         const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
         if(!emailPattern.test(email)){
             document.getElementById("emailError").textContent = "your email is not valid";
-            let isValid = false;
+            isValid = false;
 
         }
 
 
-    const phonePattern = /^(\\+98|0)?9\\d{9}$/;
+    const phonePattern = /^(\+98|0)?9\\d{9}$/;
         if(!phonePattern.test(phone)){
             document.getElementById("phoneError").textContent = "your phone is not valid";
-            let isValid = false;
+            isValid = false;
 
         }
 
 
-        const passwordPattern = /    ^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+])[A-Za-z0-9!@#$%^&*()_+]{8,}$/;
-        if(!passwordPattern.test(phone)){
+        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+])[A-Za-z0-9!@#$%^&*()_+]{8,}$/;
+        if(!passwordPattern.test(password)){
             document.getElementById("passwordError").textContent = "your password is not valid";
-            let isValid = false;
+            isValid = false;
 
         }
 
