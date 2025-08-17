@@ -8,21 +8,79 @@
 <body>
 
     <style>
-
-        input{
-            width: 50%;
-            padding: 8px;
-            margin-top: 5px;
-            border-radius: 4px;
+        body {
+          background: #f7f9fc;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh; 
         }
-
-     .error{
-        color: red;
-        margin-top: 3px;
-     }
-
-    </style>
-
+    
+        form {
+          background: #fff;
+          padding: 25px 30px;
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+          width: 500px;
+        }
+    
+        h2 {
+          text-align: center;
+          margin-bottom: 20px;
+          color: #333;
+        }
+    
+        label {
+          display: block;
+          margin-bottom: 15px;
+          font-weight: bold;
+          color: #444;
+        }
+    
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          font-size: 14px;
+          margin-top: 5px;
+          transition: border-color 0.3s;
+        }
+    
+        input:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+    
+        input.error-input {
+          border-color: red;
+          background: #fff0f0;
+        }
+    
+        .error {
+          color: red;
+          font-size: 13px;
+          margin-top: 3px;
+          display: block;
+        }
+    
+        button {
+          width: 100%;
+          padding: 10px;
+          background: #007bff;
+          border: none;
+          color: white;
+          border-radius: 6px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background 0.3s;
+          margin: auto;
+        }
+    
+        button:hover {
+          background: #0056b3;
+        }
+      </style>
 <form id="signupForm" onsubmit="return validateForm()">
 
 <label>
