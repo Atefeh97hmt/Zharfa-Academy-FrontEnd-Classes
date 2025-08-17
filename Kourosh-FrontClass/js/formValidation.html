@@ -115,6 +115,15 @@
 
 </label>
 
+<label>
+  password confirm:
+  <input type="password" id="passwordConfirm" name="passwordConfirm">
+  <span class="error" id="passwordConfirmError"></span>
+</label>
+
+
+
+
 <button type="submit">submit</button>
 
 </form>
@@ -131,19 +140,21 @@
         document.getElementById("emailError").textContent="";
         document.getElementById("phoneError").textContent="";
         document.getElementById("passwordError").textContent="";
+        document.getElementById("passwordConfirmError").textContent="";
 
 
         const fullName = document.getElementById('fullName').value.trim();
         const email = document.getElementById("email").value.trim();
         const phone = document.getElementById("phone").value.trim();
         const password = document.getElementById("password").value.trim();
+        const passwordConfirm = document.getElementById("passwordConfirm").value.trim();
 
 
 
 
         if(fullName.length < 3){
             document.getElementById('fullNameError').textContent="your name can not be smaller than 3 characters";
-            isValid = false;
+          isValid = false;
 
         }
       
@@ -171,7 +182,12 @@
 
         }
 
+     
+        if (password !== passwordConfirm){
+          document.getElementById('passwordConfirmError').textContent = "password and confirm is not the same";
+          isValid = false;
 
+        }
 
 
 
