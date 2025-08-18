@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+    .error{
+        color: red;
+    }
+</style>
+
+
+
+<h2>register form</h2>
+
+<form onsubmit="return validateForm()">
+
+<label>
+    <input placeholder="name" type="text" id="fullName" name="fullName">
+    <span class="error" id="fullNameError"></span>
+</label>
+
+<label>
+    <input placeholder="email"  type="email" id="email" name="email">
+    <span class="error" id="emailError"></span>
+
+</label>
+
+<label>
+    <input placeholder="phone" type="phone" id="phone" name="phone">
+    <span class="error" id="phoneError"></span>
+
+</label>
+
+
+<label>
+    <input placeholder="pass" type="password" id="password" name="password">
+    <span class="error" id="passwordError"></span>
+
+</label>
+
+
+<button type="submit"> submit</button>
+
+</form>
+
+
+
+<script>
+
+let isValid = true;
+
+
+function validateForm(){
+
+document.getElementById('fullNameError').textContent = '';
+document.getElementById('emailError').textContent = '';
+document.getElementById('phoneError').textContent = '';
+document.getElementById('passwordError').textContent = '';
+
+
+
+const fullName = document.getElementById('fullName').value;
+const email = document.getElementById('email').value;
+const phone = document.getElementById('phone').value;
+const password = document.getElementById('password').value;
+
+
+if(fullName.length < 3 ){
+    document.getElementById("fullNameError").textContent = 'your name should be atleast 3 char';
+     isValid = false;
+
+}
+
+const emailPattern = /^\S+@\S+\.\S+$/;
+if(!emailPattern.test(email)){
+    document.getElementById("emailError").textContent = 'your email is not valid';
+    isValid = false;
+
+}
+
+const phonePattern = /(^(0?9)|(\+?989))\d{2}\W?\d{3}\W?\d{4}/g;
+if(!phonePattern.test(phone)){
+    document.getElementById("phoneError").textContent = 'your phone number is not valid';
+    isValid = false;
+
+}
+
+
+
+const passwordPattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+if(!passwordPattern.test(password)){
+    document.getElementById("passwordError").textContent = 'password is not acceptable';
+    isValid = false;
+
+}
+
+
+return isValid;
+
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
