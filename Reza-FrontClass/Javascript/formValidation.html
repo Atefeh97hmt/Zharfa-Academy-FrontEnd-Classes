@@ -54,6 +54,7 @@
 <label>
     <input placeholder="pass" type="password" id="password" name="password">
     <span class="error" id="passwordError"></span>
+    <button onclick="togglex()">  eye </button>
 
 </label>
 
@@ -61,7 +62,6 @@
 <label>
     <input type="password" id="confirmPassword" name="confirmPassword" placeholder="confirm pass">
     <span class="error" id="confirmPasswordError"></span>
-    
 </label>
 
 
@@ -151,7 +151,12 @@ return isValid;
 
 }
 
+function togglex(){
 
+const x = document.getElementById("password");
+x.type = x.type === "password" ? "text": "password";
+
+}
 
 </script>
 
