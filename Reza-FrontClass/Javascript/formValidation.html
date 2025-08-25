@@ -11,6 +11,20 @@
     .error{
         color: red;
     }
+
+    input{
+        padding: 10px 5px;
+        width: 300px;
+        margin-bottom: 5px;
+    }
+
+
+   input::placeholder{
+
+    color: #505050;
+    font-size:20px;
+   }
+
 </style>
 
 
@@ -29,7 +43,7 @@
     <span class="error" id="emailError"></span>
 
 </label>
-
+<br>
 <label>
     <input placeholder="phone" type="phone" id="phone" name="phone">
     <span class="error" id="phoneError"></span>
@@ -42,6 +56,21 @@
     <span class="error" id="passwordError"></span>
 
 </label>
+
+
+<label>
+    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="confirm pass">
+    <span class="error" id="confirmPasswordError"></span>
+    
+</label>
+
+
+
+<div>
+    <input type="checkbox" id="terms" name="terms">
+    <label for="terms"> i agree</label>
+    <span class="error" id="termsError"></span>
+</div>
 
 
 <button type="submit"> submit</button>
@@ -61,13 +90,18 @@ document.getElementById('fullNameError').textContent = '';
 document.getElementById('emailError').textContent = '';
 document.getElementById('phoneError').textContent = '';
 document.getElementById('passwordError').textContent = '';
-
-
+document.getElementById("confirmPasswordError").textContent="";
+document.getElementById("termsError").textContent="";
 
 const fullName = document.getElementById('fullName').value;
 const email = document.getElementById('email').value;
 const phone = document.getElementById('phone').value;
 const password = document.getElementById('password').value;
+const confirmPassword = document.getElementById("confirmPassword").value;
+const termsChecked = document.getElementById('terms').checked;
+
+
+
 
 
 if(fullName.length < 3 ){
@@ -95,6 +129,19 @@ if(!phonePattern.test(phone)){
 const passwordPattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
 if(!passwordPattern.test(password)){
     document.getElementById("passwordError").textContent = 'password is not acceptable';
+    isValid = false;
+
+}
+
+
+if(password !== confirmPassword){
+    document.getElementById('confirmPasswordError').textContent ="the confirm password you entered is not equal to password";
+    isValid = false;
+}
+
+
+if(!termsChecked){
+    document.getElementById('termsError').textContent = "please checked the agree"
     isValid = false;
 
 }
