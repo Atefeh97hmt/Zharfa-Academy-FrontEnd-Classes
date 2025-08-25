@@ -232,6 +232,7 @@ outline: 1px solid blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .line{
@@ -320,3 +321,62 @@ text-decoration: none;
 color: #434343;
 margin-right: 10px;
 }
+
+.menu-mobile{
+    display: none;
+}
+
+
+
+@media screen and (max-width:1110px) {
+    .car-gallery{
+        overflow: hidden;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu-mobile{
+        display: block;
+    }
+    
+.brands{
+    justify-content: center;
+}
+    
+
+.green-button{
+    margin-top: 30px;
+}
+
+
+.selectOption{
+    margin-bottom: 30px;
+
+}
+
+.serach-container{
+    width: 300px;
+
+}
+.search{
+    width: 300px;
+}
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.services{
+    justify-content: center;
+}
+
+
+.brands{
+    width:80%;
+}
+}
+
+
