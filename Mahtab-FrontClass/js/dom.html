@@ -7,6 +7,7 @@
 </head>
 <body>
 
+    <h1 id="myHeading">MY HEADING</h1>
 
 <p id="para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ut magni consequuntur. Est officiis cupiditate soluta nemo cumque ipsam nostrum et doloribus fugiat, odit magni temporibus magnam laborum pariatur iure! </p>
 
@@ -16,6 +17,9 @@
 <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
 <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
 <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
+
+
+<p id="p2"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi dolorum assumenda sunt repellendus in ex ad esse nostrum harum molestiae asperiores fugiat fugit mollitia temporibus quam, alias odit voluptatem ratione.  </p>
 
 
 
@@ -31,6 +35,22 @@
 
    const paragraphs = document.querySelectorAll(".text");
    paragraphs.forEach(p => p.style.color = "green")
+
+
+const heading = document.getElementById("myHeading");
+//heading.innerHTML = 'Mahtabs heading';
+//heading.innerText = 'my heading 2'
+heading.innerHTML = '  <i> mahtab </i>   ';
+
+
+const p2 = document.getElementById("p2");
+p2.style.color = "red";
+p2.style.fontSize = "20px";
+p2.style.backgroundColor = "yellow";
+
+
+
+
 
 </script>
 
