@@ -25,6 +25,11 @@
 <button id="btn"> click</button>
 <p id="text">hellow</p>
 
+<button id="btn2">  click to change </button>
+<p id="text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo! Sapiente nemo nulla dolor id hic, officiis modi eaque! Voluptas iste natus dolore doloremque excepturi architecto voluptatem quia? Optio, velit.</p>
+
+
+
 
 <script>
 
@@ -56,6 +61,16 @@ p2.style.backgroundColor = "yellow";
 const btn = document.getElementById("btn");
 btn.onclick = function () {
     document.getElementById("text").innerText = "you clicked"
+}
+
+
+
+const btn2 = document.getElementById("btn2");
+btn2.onclick = function (){
+    document.getElementById ('text2').style.color = "red";
+    document.getElementById ('text2').style.backgroundColor = "black";
+    document.getElementById ('text2').style.padding = "10px";
+
 }
 
 
