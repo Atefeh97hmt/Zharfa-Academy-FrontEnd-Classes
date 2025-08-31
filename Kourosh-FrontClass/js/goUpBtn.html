@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>go up btn</title>
+</head>
+<body>
+    
+
+    <style>
+
+
+body{
+    height: 2000px;
+    background-color: aliceblue;
+}
+
+
+
+#goUpBtn{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #3d3dfe;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    display: none;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+#goUpBtn:hover{
+    opacity: 1;
+}
+
+    </style>
+
+<h1>go up the page btn</h1>
+
+<p> click to go up</p>
+<p> click to go up</p>
+<p> click to go up</p>
+<p> click to go up</p>
+<p> click to go up</p>
+
+
+
+<button id="goUpBtn"><svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 15L12 9L18 15" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+
+
+<script>
+    const goUpBtn = document.getElementById("goUpBtn");
+
+
+window.addEventListener ("scroll", () =>{
+
+    if(window.scrollY > 200){
+        goUpBtn.style.display = 'block';
+    } else{
+        goUpBtn.style.display = 'none';
+    }
+
+
+});
+
+
+goUpBtn.addEventListener('click', () =>{
+
+window.scrollTo({
+    top:0,
+    behavior:"smooth"
+});
+
+});
+
+
+
+</script>
+
+
+
+</body>
+</html>
