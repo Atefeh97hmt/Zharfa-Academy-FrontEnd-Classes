@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+
+<p id="para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ut magni consequuntur. Est officiis cupiditate soluta nemo cumque ipsam nostrum et doloribus fugiat, odit magni temporibus magnam laborum pariatur iure! </p>
+
+<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate blanditiis dolorum magni totam aut quis nesciunt pariatur temporibus. Et corporis mollitia quae sed quia velit expedita quidem minima quod. Soluta.</p>
+<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
+<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
+<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
+<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
+<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
+
+
+
+<script>
+
+    const para = document.getElementById("para");
+    para.style.color = "blue"
+    
+
+   const firstPara = document.querySelector(".text");
+   firstPara.style.fontWeight = 'bold';
+
+
+   const paragraphs = document.querySelectorAll(".text");
+   paragraphs.forEach(p => p.style.color = "green")
+
+</script>
+
+
+
+
+
+    
+</body>
+</html>
