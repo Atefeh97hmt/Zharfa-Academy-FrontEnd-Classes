@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="/Mahtab-FrontClass/finalProject/style.css">
+</head>
+<body>
+   
+    <div  class="container">
+
+<div class="calculator">
+
+    <div id="result">0</div>
+
+    <div class="row">
+
+   <div class="btn" onclick="press('7')">7</div>
+   <div class="btn" onclick="press('8')">8</div>
+   <div class="btn" onclick="press('9')">9</div>
+   <div class="btn op-btn" onclick="press('/')">/</div>
+
+    </div>
+
+    <div class="row">
+        <div class="btn" onclick="press('4')">4</div>
+        <div class="btn" onclick="press('5')">5</div>
+        <div class="btn" onclick="press('6')">6</div>
+        <div class="btn op-btn" onclick="press('*')"><svg width="25px" height="25px" version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path class="puchipuchi_een" d="M23.071,20.243c0.781,0.781,0.781,2.047,0,2.828s-2.047,0.781-2.828,0L16,18.828l-4.243,4.243 c-0.781,0.781-2.047,0.781-2.828,0s-0.781-2.047,0-2.828L13.172,16l-4.243-4.243c-0.781-0.781-0.781-2.047,0-2.828 s2.047-0.781,2.828,0L16,13.172l4.243-4.243c0.781-0.781,2.047-0.781,2.828,0s0.781,2.047,0,2.828L18.828,16L23.071,20.243z"></path> </g></svg></div>
+    </div>
+
+    <div class="row">
+        <div class="btn" onclick="press('1')"> 1</div>
+        <div class="btn" onclick="press('2')"> 2</div>
+        <div class="btn" onclick="press('3')"> 3</div>
+        <div class="btn op-btn" onclick="press('-')"> -</div>
+    </div>
+
+    <div class="row">
+        <div class="btn clear-btn" onclick="clearResult()">c</div>
+        <div class="btn" onclick="press('0')">0</div>
+        <div class="btn op-btn" onclick="calculate()">=</div>
+        <div class="btn op-btn" onclick="press('+')">+</div>
+    </div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<script src="/Mahtab-FrontClass/finalProject/main.js"></script>
+</body>
+</html>
