@@ -1,0 +1,111 @@
+svg {
+    width: 25px;
+    height: 25px;
+}
+
+
+body {
+    background-color: #dcdcdc;
+    direction: rtl;
+}
+
+.card-responsive {
+    background-color: white;
+    height: auto;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    padding-left: 150px;
+
+}
+
+.calender,
+.night,
+.airline {
+    display: flex;
+    align-items: center;
+
+}
+
+.pad-l {
+    padding-left: 10px;
+}
+
+
+.container {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.lable {
+    background-color: #b2deff;
+    padding: 5px;
+    border-radius: 100px;
+    position: absolute;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10px;
+    top: 5px;
+}
+
+.night-air {
+    display: flex;
+}
+
+.night,
+.airline {
+    padding: 0 50px;
+}
+
+@media screen and (max-width:1022px) {
+
+    .card-responsive {
+        flex-direction: column;
+        padding-left: 0;
+        align-items: flex-start;
+    }
+
+    .calender,
+    .night,
+    .airline {
+        padding-top: 10px;
+
+    }
+
+
+    .lable {
+
+        left: 10px;
+        top: 80px;
+    }
+
+
+    .price {
+
+        width: 100%;
+        text-align: center;
+        border-top: 1px dotted #b8b8f9;
+        padding-top: 10px;
+        margin-top: 20px;
+        color: #5e5eff;
+    }
+
+    .night-air {
+        justify-content: space-between;
+    }
+
+    .night,
+    .airline {
+        padding: 0 0;
+    }
+
+    .night {
+        padding-left: 20px;
+    }
+}
