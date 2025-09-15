@@ -1,0 +1,117 @@
+
+body{
+    direction: rtl;
+}
+
+.container{
+    padding: 0 80px;
+}
+
+.tours{
+    display: flex;
+    border: 1px solid #7e7e7e;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+/* .tours-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+.tours-right-content{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.tour-title{
+    margin-bottom: 30px;
+}
+
+.tours-right-content-three{
+    display: flex;
+    padding-right: 70px;
+    flex-wrap: wrap;
+
+
+}
+
+
+.tours-right-content p{
+    display: flex;
+    align-items: center;
+}
+
+.tours-right-content p svg{
+ padding: 5px;
+}
+
+
+.tours-left p{
+padding: 10px 0;
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+color: blue;
+}
+
+
+.tours-btn{
+    background-color: blue;
+    color: white;
+    border: none;
+    width: 180px;
+    border-radius: 10px;
+    padding: 8px 5px;
+
+}
+
+
+.lables{
+    position: absolute;
+    top: 20px;
+    left: 30%;
+}
+
+
+.lable{
+    background-color: rgb(80, 121, 222);
+    border: 1px solid rgb(49, 118, 121);
+    border-radius: 50px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+
+@media screen and (max-width:768px) {
+    .tours-right-content-three{
+        padding-right: 0;
+    }
+    
+    .lables{
+
+        left: -10px;
+       top: 50%;
+       display: flex;
+       flex-direction: column;
+       
+    }
+    .lable{
+    margin-bottom: 5px;
+    }
+
+
+    .tours{
+        justify-content: center;
+    }
+} 

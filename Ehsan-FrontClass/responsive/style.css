@@ -14,7 +14,7 @@ body {
     height: auto;
     padding: 20px 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 20px;
     align-items: center;
     border-radius: 10px;
