@@ -1,65 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event</title>
 </head>
+
 <body>
-    
-
-<style>
-    .Mytext{
-        font-size: 25px;
-    }
-</style>
-
-<button onclick="alert('hello')"> click me</button>
-
-<button id="btn">click</button>
-
-<button id="btn2">click 2</button>
 
 
-<p id="txt" class="Mytext">dbl click on me</p>
+    <style>
+        .Mytext {
+            font-size: 25px;
+        }
+    </style>
 
-<p id='text' class="Mytext">the mouse id on me </p>
+    <button onclick="alert('hello')"> click me</button>
 
+    <button id="btn">click</button>
 
-<button id="myBtn">keep your click</button>
-
-
-<script>
-    let btn1 = document.getElementById('btn');
-    btn1.onclick = function (){
-        alert ('you clicked on btn');
-    }
-
-    let btn2 = document.getElementById("btn2");
-    btn2.addEventListener('click', function(){
-        console.log("thanks");
-    });
+    <button id="btn2">click 2</button>
 
 
-    document.getElementById('txt').addEventListener('dblclick', () =>{
-   alert ("you click twice");
+    <p id="txt" class="Mytext">dbl click on me</p>
 
-    } );
-
-
-let text1 = document.getElementById("text");
-text1.addEventListener('mouseover', ()=> text1.style.color = "red");
-text1.addEventListener('mouseout', ()=>{
-    text1.style.color = "black";
-});
-
-let myBtn = document.getElementById ("myBtn");
-myBtn.addEventListener('mousedown', ()=> myBtn.innerText = 'you keep the click');
-myBtn.addEventListener("mouseup", ()=> myBtn.innerText = "you throw of the click")
+    <p id='text' class="Mytext">the mouse id on me </p>
 
 
-</script>
+    <button id="myBtn">keep your click</button>
+
+
+    <input type="text" id="inp" placeholder="type sth">
+
+    <script>
+        let btn1 = document.getElementById('btn');
+        btn1.onclick = function () {
+            alert('you clicked on btn');
+        }
+
+        let btn2 = document.getElementById("btn2");
+        btn2.addEventListener('click', function () {
+            console.log("thanks");
+        });
+
+
+        document.getElementById('txt').addEventListener('dblclick', () => {
+            alert("you click twice");
+
+        });
+
+
+        let text1 = document.getElementById("text");
+        text1.addEventListener('mouseover', () => text1.style.color = "red");
+        text1.addEventListener('mouseout', () => {
+            text1.style.color = "black";
+        });
+
+        let myBtn = document.getElementById("myBtn");
+        myBtn.addEventListener('mousedown', () => myBtn.innerText = 'you keep the click');
+        myBtn.addEventListener("mouseup", () => myBtn.innerText = "you throw of the click");
+
+
+
+
+        document.getElementById('inp').addEventListener('keydown', (event) => {
+           console.log('key down:', event.key);
+        });
+
+        document.getElementById('inp').addEventListener('keyup', (event) => {
+            console.log ('key up:', event.key) ;
+        });
+
+
+
+
+
+
+
+    </script>
 
 
 </body>
+
 </html>

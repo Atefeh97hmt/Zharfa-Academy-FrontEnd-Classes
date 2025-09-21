@@ -1,86 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
 </head>
+
 <body>
 
     <h1 id="myHeading">MY HEADING</h1>
 
-<p id="para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ut magni consequuntur. Est officiis cupiditate soluta nemo cumque ipsam nostrum et doloribus fugiat, odit magni temporibus magnam laborum pariatur iure! </p>
+    <p id="para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ut magni consequuntur. Est officiis
+        cupiditate soluta nemo cumque ipsam nostrum et doloribus fugiat, odit magni temporibus magnam laborum pariatur
+        iure! </p>
 
-<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate blanditiis dolorum magni totam aut quis nesciunt pariatur temporibus. Et corporis mollitia quae sed quia velit expedita quidem minima quod. Soluta.</p>
-<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
-<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
-<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
-<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
-<p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque. Perferendis, dolor.</p>
-
-
-<p id="p2"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi dolorum assumenda sunt repellendus in ex ad esse nostrum harum molestiae asperiores fugiat fugit mollitia temporibus quam, alias odit voluptatem ratione.  </p>
-
-
-<button id="btn"> click</button>
-<p id="text">hellow</p>
-
-<button id="btn2">  click to change </button>
-<p id="text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo! Sapiente nemo nulla dolor id hic, officiis modi eaque! Voluptas iste natus dolore doloremque excepturi architecto voluptatem quia? Optio, velit.</p>
-
-
-
-
-<script>
-
-    const para = document.getElementById("para");
-    para.style.color = "blue"
-    
-
-   const firstPara = document.querySelector(".text");
-   firstPara.style.fontWeight = 'bold';
+    <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate blanditiis dolorum magni totam
+        aut quis nesciunt pariatur temporibus. Et corporis mollitia quae sed quia velit expedita quidem minima quod.
+        Soluta.</p>
+    <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat
+        dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque.
+        Perferendis, dolor.</p>
+    <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat
+        dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque.
+        Perferendis, dolor.</p>
+    <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat
+        dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque.
+        Perferendis, dolor.</p>
+    <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat
+        dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque.
+        Perferendis, dolor.</p>
+    <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium velit debitis fugiat
+        dicta beatae facilis quibusdam eaque hic possimus ad omnis vitae optio modi dolor, perspiciatis atque.
+        Perferendis, dolor.</p>
 
 
-   const paragraphs = document.querySelectorAll(".text");
-   paragraphs.forEach(p => p.style.color = "green")
+    <p id="p2"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi dolorum assumenda sunt repellendus in
+        ex ad esse nostrum harum molestiae asperiores fugiat fugit mollitia temporibus quam, alias odit voluptatem
+        ratione. </p>
 
 
-const heading = document.getElementById("myHeading");
-//heading.innerHTML = 'Mahtabs heading';
-//heading.innerText = 'my heading 2'
-heading.innerHTML = '  <i> mahtab </i>   ';
+    <button id="btn"> click</button>
+    <p id="text">hellow</p>
 
-const p2 = document.getElementById("p2");
-p2.style.color = "red";
-p2.style.fontSize = "20px";
-p2.style.backgroundColor = "yellow";
+    <button id="btn2"> click to change </button>
+    <p id="text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo! Sapiente nemo nulla dolor id
+        hic, officiis modi eaque! Voluptas iste natus dolore doloremque excepturi architecto voluptatem quia? Optio,
+        velit.</p>
 
 
 
 
-const btn = document.getElementById("btn");
-btn.onclick = function () {
-    document.getElementById("text").innerText = "you clicked"
-}
+    <script>
+
+        const para = document.getElementById("para");
+        para.style.color = "blue"
+
+
+        const firstPara = document.querySelector(".text");
+        firstPara.style.fontWeight = 'bold';
+
+
+        const paragraphs = document.querySelectorAll(".text");
+        paragraphs.forEach(p => p.style.color = "green")
+
+
+        const heading = document.getElementById("myHeading");
+        //heading.innerHTML = 'Mahtabs heading';
+        //heading.innerText = 'my heading 2'
+        heading.innerHTML = '  <i> mahtab </i>   ';
+
+        const p2 = document.getElementById("p2");
+        p2.style.color = "red";
+        p2.style.fontSize = "20px";
+        p2.style.backgroundColor = "yellow";
 
 
 
-const btn2 = document.getElementById("btn2");
-btn2.onclick = function (){
-    document.getElementById ('text2').style.color = "red";
-    document.getElementById ('text2').style.backgroundColor = "black";
-    document.getElementById ('text2').style.padding = "10px";
 
-}
+        const btn = document.getElementById("btn");
+        btn.onclick = function () {
+            document.getElementById("text").innerText = "you clicked"
+        }
 
 
 
-</script>
+        const btn2 = document.getElementById("btn2");
+        btn2.onclick = function () {
+            document.getElementById('text2').style.color = "red";
+            document.getElementById('text2').style.backgroundColor = "black";
+            document.getElementById('text2').style.padding = "10px";
+
+        }
+
+
+
+    </script>
 
 
 
 
 
-    
+
 </body>
+
 </html>
