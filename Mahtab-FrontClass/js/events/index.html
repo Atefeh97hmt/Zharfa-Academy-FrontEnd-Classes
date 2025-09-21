@@ -7,12 +7,26 @@
 </head>
 <body>
     
+
+<style>
+    .Mytext{
+        font-size: 25px;
+    }
+</style>
+
 <button onclick="alert('hello')"> click me</button>
 
 <button id="btn">click</button>
 
 <button id="btn2">click 2</button>
 
+
+<p id="txt" class="Mytext">dbl click on me</p>
+
+<p id='text' class="Mytext">the mouse id on me </p>
+
+
+<button id="myBtn">keep your click</button>
 
 
 <script>
@@ -24,7 +38,25 @@
     let btn2 = document.getElementById("btn2");
     btn2.addEventListener('click', function(){
         console.log("thanks");
-    })
+    });
+
+
+    document.getElementById('txt').addEventListener('dblclick', () =>{
+   alert ("you click twice");
+
+    } );
+
+
+let text1 = document.getElementById("text");
+text1.addEventListener('mouseover', ()=> text1.style.color = "red");
+text1.addEventListener('mouseout', ()=>{
+    text1.style.color = "black";
+});
+
+let myBtn = document.getElementById ("myBtn");
+myBtn.addEventListener('mousedown', ()=> myBtn.innerText = 'you keep the click');
+myBtn.addEventListener("mouseup", ()=> myBtn.innerText = "you throw of the click")
+
 
 </script>
 
