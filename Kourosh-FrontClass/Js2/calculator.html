@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with try catch</title>
+</head>
+
+<body>
+
+    <h1> calculator </h1>
+
+    <input type="text" id="num1" placeholder="first number">
+    <input type="text" id="num2" placeholder="second number">
+
+    <select id="operator">
+        <option value="+">add</option>
+        <option value="-">minus</option>
+        <option value="*">multiply</option>
+        <option value="/"> devide</option>
+    </select>
+
+    <button onclick="calculate()">calculate</button>
+
+    <div id="result"></div>
+    <div id="error"></div>
+
+
+    <script>
+
+        function calculate() {
+            const resultDiv = document.getElementById('result');
+            const errorDiv = document.getElementById('error');
+
+            resultDiv.textContent = '';
+
+            errorDiv.textContent = '';
+
+            try {
+
+                let num1 = Number(document.getElementById('num1').value);
+                let num2 = Number(document.getElementById('num2').value);
+                let operator = document.getElementById("operator").value;
+
+                if (isNaN(num1) || isNaN(num2)) {
+                    throw new Error("please enter number!!");
+                }
+
+                let result;
+                switch(operator) {
+
+                    case "+":
+                        result = num1 + num2;
+                        break;
+
+                    case "-":
+                        result = num1 - num2;
+                        break;
+
+                    case "*":
+                        result = num1 * num2;
+                        break;
+
+                    case "/":
+                        if (num2 === 0) throw new Error("you can not use 0 for num2")
+                        result = num1 / num2;
+                        break;
+
+                    default:
+                        throw new Error('the operation in not valid');
+
+                }
+                resultDiv.textContent = "your result:" + result;
+
+
+            } catch (error) {
+                errorDiv.textContent = "error:" + error.message;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
