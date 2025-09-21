@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try catch</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        try {
+            let x = 10;
+            let y = 0;
+
+            if (y === 0) {
+                throw new Error("you can not use 0 as second number")
+            }
+            let result = x / y;
+            console.log(result);
+        } catch (error) {
+            console.log('error:' + error.message)
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
