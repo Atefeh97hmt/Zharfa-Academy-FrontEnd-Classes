@@ -14,6 +14,11 @@
         .Mytext {
             font-size: 25px;
         }
+
+
+        body{
+            height: 1000px;
+        }
     </style>
 
     <button onclick="alert('hello')"> click me</button>
@@ -61,19 +66,25 @@
         myBtn.addEventListener('mousedown', () => myBtn.innerText = 'you keep the click');
         myBtn.addEventListener("mouseup", () => myBtn.innerText = "you throw of the click");
 
-
-
-
         document.getElementById('inp').addEventListener('keydown', (event) => {
-           console.log('key down:', event.key);
+            console.log('key down:', event.key);
         });
 
         document.getElementById('inp').addEventListener('keyup', (event) => {
-            console.log ('key up:', event.key) ;
+            console.log('key up:', event.key);
         });
 
 
 
+
+        window.addEventListener('scroll', ()=>{
+            console.log ('the user is using scroll');
+        });
+
+
+        window.addEventListener('resize', ()=>{
+            console.log ('the windows width:', window.innerWidth);
+        })
 
 
 
