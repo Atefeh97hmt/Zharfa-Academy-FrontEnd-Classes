@@ -1,0 +1,22 @@
+.menu li:nth-child(3){
+    background-color: yellow;
+}
+
+
+.menu li:first-child{
+    border: 1px solid red;
+}
+
+.menu li:last-child{
+    background-color: rgb(197, 174, 218);
+}
+
+
+.menu li{
+    font-size: 20px;
+}
+
+
+.menu > li{
+color: red;
+}
