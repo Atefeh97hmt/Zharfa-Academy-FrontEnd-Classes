@@ -1,3 +1,6 @@
+body{
+    direction: rtl;
+}
 .menu li:nth-child(3){
     background-color: yellow;
 }
@@ -19,4 +22,39 @@
 
 .menu > li{
 color: red;
+}
+
+
+.box{
+    height: auto;
+    border: 1px solid red;
+    width: 350px;
+    border-radius: 20px;
+
+}
+
+
+.img1{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+
+
+.title{
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    /* padding: 20px; */
+    text-align: center;
+    margin-top: -26px;
+    z-index: 10;
+    position: relative;
+    padding: 15px 0;
+    border-radius: 14px;
+}
+
+.box3, .air{
+    display: flex;
+    align-items: center;
 }
