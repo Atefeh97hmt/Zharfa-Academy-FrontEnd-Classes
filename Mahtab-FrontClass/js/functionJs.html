@@ -60,12 +60,34 @@
 
 
 
-        let name = prompt("write your name");
-        console.log(name.toUpperCase());
+        // let name = prompt("write your name");
+        // console.log(name.toUpperCase());
 
 
 
+        let numbers = [1, 2, 3, 4, 5];
 
+        numbers.push(6);
+        console.log(numbers);
+
+        numbers.pop();
+        console.log(numbers);
+
+        let doubled = numbers.map(x => x * 2);
+        console.log(doubled);
+
+
+        let filtered = numbers.filter(x => x > 2);
+        console.log(filtered);
+
+
+        numbers.unshift(0);
+        console.log(numbers);
+
+        numbers.shift(0);
+        console.log(numbers);
+
+        console.log(numbers.indexOf(2));
 
     </script>
 
