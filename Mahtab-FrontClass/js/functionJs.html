@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Js Functions
+    </title>
+</head>
+
+<body>
+
+
+    <script>
+        //alert("hi");
+        //let name = prompt("what is your name?")
+        //  alert("wellcome" + name + "*")
+
+
+        let num1 = parseInt("42");
+        let num2 = String(42);
+        let num3 = parseFloat("3.14")
+
+        console.log(num1);
+        console.log(num2);
+        console.log(num3);
+
+
+
+        console.log(Math.abs(-10));
+        console.log(Math.round(4.6));
+        console.log(Math.ceil(4.2));
+        console.log(Math.floor(4.2));
+        console.log(Math.random());
+        console.log(Math.pow(2, 3));
+
+
+
+        let now = new Date();
+        console.log(now.toString());
+
+        console.log("year:", now.getFullYear());
+        console.log("month:", now.getMonth() + 1);
+        console.log("day:", now.getDate());
+        console.log("hour:", now.getHours());
+        console.log("minutes:", now.getMinutes());
+        console.log("seconds:", now.getSeconds());
+        console.log("Milliseconds:", now.getMilliseconds());
+
+
+
+        let text = "Javascript is Fun";
+        console.log(text.length);
+        console.log(text.toUpperCase());
+        console.log(text.toLocaleLowerCase());
+        console.log(text.includes("Fun"));
+        console.log(text.replace("Fun", "Awesome"));
+        console.log(text.slice(0, 10));
+
+
+
+        let name = prompt("write your name");
+        console.log(name.toUpperCase());
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

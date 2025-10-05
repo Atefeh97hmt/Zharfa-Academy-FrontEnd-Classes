@@ -28,14 +28,14 @@ var xx;
 console.log(xx);
 
 // array
-let fruits =['apple', 'banana', 'cherry'];
+let fruits = ['apple', 'banana', 'cherry'];
 console.log(fruits);
 
 // object
 
-var person ={
+var person = {
     name: "mahtab",
-    age:13,
+    age: 13,
     isStudent: true,
 };
 var isStudent = true;
