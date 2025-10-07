@@ -1,0 +1,28 @@
+.text{
+    font-size: 20px;
+    color: darkblue;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    position: relative;
+}
+
+
+.text::before{
+    content: "✔️";
+}
+
+
+.text::after{
+    content: "💯";
+}
+
+ul{
+    list-style: none;
+}
+
+li::before{
+    content: "✤";
+    color: red;
+    font-size:20px;
+    padding-right: 10px;
+}
