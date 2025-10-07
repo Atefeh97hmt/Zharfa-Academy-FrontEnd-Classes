@@ -13,7 +13,11 @@
 
 
 .text::after{
-    content: "💯";
+    content: "";
+    width: 10px;
+    height: 5px;
+    border:1px solid red;
+    padding: 10px;
 }
 
 ul{
