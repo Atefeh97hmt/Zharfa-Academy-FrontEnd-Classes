@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background</title>
+</head>
+<body>
+
+  <button id="btn" style="background-color: crimson; color: aliceblue;">
+    Click to change color
+  </button>
+
+  <script>
+    // آرایه‌ای از رنگ‌ها
+    let colors = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'orange'];
+
+    // گرفتن دکمه
+    let btn = document.getElementById("btn");
+
+    // شمارنده برای تغییر رنگ‌ها
+    let index = 0;
+
+    // وقتی روی دکمه کلیک می‌کنی
+    btn.addEventListener('click', function() {
+      // رنگ پس‌زمینه را از آرایه بگیر
+      document.body.style.backgroundColor = colors[index];
+
+      // افزایش شمارنده
+      index++;
+
+      // اگر رسید به آخر آرایه، از اول شروع کن
+      if (index >= colors.length) {
+        index = 0;
+      }
+    });
+  </script>
+
+</body>
+</html>
