@@ -24,3 +24,5 @@ function prevSlide() {
     if (current < 0) current = images.length - 1;
     showSlide(current);
 }
+
+setInterval(nextSlide, 2000);
