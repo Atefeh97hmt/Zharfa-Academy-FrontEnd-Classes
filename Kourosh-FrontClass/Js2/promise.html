@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+
+        //   const myPromise = new Promise((resolve, reject) => {
+        //       let success = true;
+        //    if (success) {
+        //         resolve('the operation was successful')
+        //    } else {
+        //      reject('the operation failed')
+        //    }
+        //  }
+        //  )
+
+        const waitTowSeconds = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const success = false;
+                if (success) {
+                    resolve('two seconds pass and success')
+                } else {
+                    reject('an error occure')
+                }
+            }, 2000)
+        })
+        
+        waitTowSeconds
+            .then((message) => console.log(message))
+            .catch((error) => console.log(error))
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
