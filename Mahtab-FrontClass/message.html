@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 0 50px #0000ff9b;
+
+        }
+    </style>
+
+    <h1 id="message">salam!</h1>
+
+    <button id="startBtn">show message</button>
+
+
+
+    <script>
+        const button = document.getElementById('startBtn');
+        const message = document.getElementById('message');
+
+        button.addEventListener('click', () => {
+
+            message.textContent = "please wait ...";
+
+
+            setTimeout(() => {
+                message.textContent = 'wellcome!'
+            }, 3000)
+        })
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
