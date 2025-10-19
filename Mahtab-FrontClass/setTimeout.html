@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        setTimeout(() => {
+            console.log("hi Mahtab!")
+        }, 4000);
+
+
+
+        let counter = 0;
+        const intervalId = setInterval(() => {
+            counter++;
+            console.log(counter);
+
+            if (counter >= 5) {
+                clearInterval(intervalId);
+                console.log("the count finished")
+            }
+
+
+        }, 2000)
+
+    </script>
+
+
+
+</body>
+
+</html>
