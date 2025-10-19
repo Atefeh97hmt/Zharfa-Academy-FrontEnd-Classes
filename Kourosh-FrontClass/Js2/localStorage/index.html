@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json download</title>
+</head>
+
+<body style="padding-top: 100px;">
+
+    <input id="name" placeholder="name">
+    <input id="age" placeholder="age">
+    <button id="saveBtn">save</button>
+    <button id="downloadBtn">Json download</button>
+
+    <script>
+        const saveBtn = document.getElementById('saveBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        saveBtn.onclick = () => {
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            let data = JSON.parse(localStorage.getItem('data')) || [];
+            data.push({ name, age });
+            localStorage.setItem('data', JSON.stringify(data));
+            alert('your data saved !');
+        };
+        downloadBtn.onclick = () => {
+            const data = localStorage.getItem('data');
+            const blob = new Blob([data], { type: 'application/json' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'data.json';
+            link.click();
+        }
+
+    </script>
+
+</body>
+
+</html>
