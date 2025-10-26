@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+
+<body>
+
+
+
+    <style>
+        body {
+            background-color: #f9fafb;
+            text-align: center;
+            padding: 100px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .loading {
+            color: orange;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+
+
+
+
+    <h1>promise</h1>
+    <button id="loadBtn">get data</button>
+    <p id="message"></p>
+
+
+
+    <script>
+        function getData() {
+            return new Promise((resolve, reject) => {
+                document.getElementById('message').textContent = 'is loading ...';
+                document.getElementById('message').className = 'loading';
+
+
+                setTimeout(() => {
+
+                    const success = Math.random() < 0.4;
+                    if (success) {
+                        resolve('data is catch successfully');
+                    } else {
+                        reject('error in catching data')
+                    }
+                }, 2000)
+            })
+
+        }
+
+        document.getElementById('loadBtn').addEventListener('click', () => {
+
+            getData()
+                .then((message) => {
+                    document.getElementById('message').textContent = message;
+                    document.getElementById('message').className = "success"
+                })
+                .catch((error) => {
+                    document.getElementById('message').textContent = error;
+                    document.getElementById('message').className = "error"
+
+                });
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
