@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+
+
+
+    <button id="toggleBtn">click to hidden</button>
+    <p id="content" class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda porro aut dolores similique. Odit
+        nihil cumque aperiam odio vero, corporis sit quo eveniet perferendis. Eos vel sequi mollitia vitae voluptas.</p>
+
+
+
+    <script>
+
+        const toggleBtn = document.getElementById('toggleBtn');
+        const content = document.getElementById('content');
+
+        toggleBtn.addEventListener('click', () => {
+            content.classList.toggle('show');
+        })
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

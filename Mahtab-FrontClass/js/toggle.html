@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle</title>
+</head>
+
+<body>
+
+
+
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+
+    <p id="myText">hellow</p>
+    <button id="btn">change color</button>
+
+
+
+    <script>
+
+        const btn = document.getElementById('btn');
+        const text = document.getElementById('myText');
+
+        btn.addEventListener('click', function () {
+            text.classList.toggle('red')
+        });
+
+    </script>
+
+</body>
+
+</html>
