@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacts</title>
+</head>
+
+<body>
+
+
+    <style>
+        .delete{
+            background-color: #850b0b;
+            margin-left: 20px;
+            color: white;
+            border: none;
+            padding: 10px;
+        }
+
+        .contact{
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <h1>contacts</h1>
+    <input type="text" id="name" placeholder="name">
+    <input type="text" id="phone" placeholder="phone">
+    <input type="email" id="email" placeholder="email">
+    <button onclick="addContact()">add contact</button>
+
+    <ul id="contactList">
+
+
+
+    </ul>
+
+    <script>
+
+        let contscts = [
+            { "name": "reza", "phone": "09123456789", "email": "Reza@gmail.com" },
+            { "name": "ali", "phone": "09123445697", "email": "ali@gmail.com" },
+            { "name": "sara", "phone": "0912369852", "email": "sara@gmail.com" },
+        ]
+
+        function showContacts() {
+
+            const list = document.getElementById("contactList");
+            list.innerHTML = "";
+            contscts.forEach((contact, index) => {
+                const li = document.createElement("li");
+                li.className = "contact";
+                li.innerHTML = ` ${contact.name} - ${contact.phone} - ${contact.email}  
+                <button class="delete" onclick="deleteContact(${index})">delete</button>`;
+                list.appendChild(li);
+
+            });
+
+        }
+
+
+
+        function addContact() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+
+            if (name && phone && email) {
+                contscts.push({ name, phone, email });
+                showContacts();
+                document.getElementById('name').value = "";
+                document.getElementById('phone').value = "";
+                document.getElementById('email').value = "";
+
+            } else {
+                alert('please fill out all inputs');
+            }
+
+        }
+
+
+        function deleteContact(index) {
+            contscts.splice(index, 1);
+            showContacts();
+
+        }
+        showContacts()
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
