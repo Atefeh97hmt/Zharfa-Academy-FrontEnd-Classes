@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu site</title>
+    <link rel="stylesheet" href="/script/menu site.css">
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-color: rgb(96, 69, 49);
+        }
+
+        .display_block {
+            display: block !important;
+
+        }
+
+        .head-li {
+            padding: 0 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .head-li-1 {
+            cursor: pointer;
+            padding: 0 20px;
+            /* text-align: center */
+            font-size: 18px;
+
+
+        }
+
+        .menu_div {
+            background-color: rgb(175, 133, 104);
+
+            line-height: 30px;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 5px;
+            display: none;
+            width: 120px;
+        }
+
+
+        .head-li-1:hover .menu_div {
+            display: block;
+        }
+    </style>
+    <ul class="head-ul">
+        <li id="head-li" class="head-li-1">Home
+            <div id="menu_div" class="menu_div">
+                About us page <br>
+                Get to know us <br>
+                Call us
+            </div>
+        </li>
+        <li class="head-li">About</li>
+        <li class="head-li">Our Gallery</li>
+        <li class="head-li">Pricing</li>
+        <li class="head-li">Service</li>
+    </ul>
+
+
+
+    <script>
+
+        const head_Li = document.getElementById("head-li");
+        const menu_Div = document.getElementById("menu_div");
+        head_Li.addEventListener('click', () => {
+            menu_Div.classList.toggle("display_block");
+
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>
