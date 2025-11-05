@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch api</title>
+</head>
+
+<body>
+
+
+    <h1>list of fruits</h1>
+
+    <button id="btn">show the list</button>
+
+    <ul id="list"></ul>
+
+
+
+
+    <script>
+
+        var btn = document.getElementById('btn');
+        var list = document.getElementById('list');
+
+        btn.addEventListener('click', function () {
+
+            fetch('/Reza-FrontClass/JS2/fetch/data.json')
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (data) {
+                    data.forEach(function (item) {
+                        var li = document.createElement('li');
+                        li.textContent = item.name + "-" + item.calory;
+                        list.appendChild(li);
+                    });
+                })
+                .catch(function () {
+                    alert('error in catching data')
+                });
+        });
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
