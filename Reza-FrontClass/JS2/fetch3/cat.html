@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats</title>
+</head>
+
+<body>
+
+    <h1>ctas picture</h1>
+    <button id="btn">show image</button>
+    <div id="result"></div>
+
+
+
+
+    <script>
+        var btn = document.getElementById('btn');
+        var result = document.getElementById('result');
+
+
+        btn.addEventListener('click', () => {
+
+            result.innerHTML = '<p> loading... </p>'
+
+            fetch('https://api.thecatapi.com/v1/images/search')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    var imgUrl = data[0].url;
+                    result.innerHTML = '<img  src="' + imgUrl + '"alt = "cat image">'
+                })
+                .catch(function () {
+                    result.innerHTML = '<p style="color:red;"> error in showing image </p>';
+                })
+        })
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
