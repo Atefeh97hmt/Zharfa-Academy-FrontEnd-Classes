@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+</head>
+
+<body>
+
+
+    <h1>To Do List</h1>
+    <input type="text" id="taskInput" placeholder="new task">
+    <button onclick="addTask()">add</button>
+    <button onclick="clearAll()">clear</button>
+
+    <h3>List of tasks (local storage)</h3>
+    <ul id="taskList"></ul>
+
+    <h3>List of tasks (Session storage)</h3>
+    <ul id="sessionTaskList"></ul>
+
+
+
+    <script>
+
+        window.onload = function () {
+            loadTasks();
+            loadSessionTasks();
+        }
+
+        function addTask() {
+            let task = document.getElementById('taskInput').value;
+            if (task === '') return;
+
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+
+            let sessionTasks = JSON.parse(sessionStorage.getItem('sessionTasks')) || [];
+            sessionTasks.push(task);
+            sessionStorage.setItem('sessionTasks', JSON.stringify(sessionTasks));
+
+            loadTasks();
+            loadSessionTasks();
+
+            document.getElementById('taskInput').value = '';
+
+        }
+
+        function loadTasks() {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            let taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+            tasks.forEach((task, index) => {
+                taskList.innerHTML += ` <li> ${task} <button onclick="removeTask(${index})"> delete </button></li> `
+            });
+        }
+
+        function loadSessionTasks() {
+            let sessionTasks = JSON.parse(sessionStorage.getItem('sessionTasks')) || [];
+            let sessionTaskList = document.getElementById('sessionTaskList');
+            sessionTaskList.innerHTML = '';
+            sessionTasks.forEach((task) => {
+                sessionTaskList.innerHTML += ` <li> ${task} </li>`
+            });
+        }
+
+        function removeTask(index) {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.splice(index, 1);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            loadTasks();
+        }
+
+        function clearAll() {
+            localStorage.clear();
+            sessionStorage.clear();
+            loadTasks();
+            loadSessionTasks();
+        }
+
+
+    </script>
+
+</body>
+
+</html>
