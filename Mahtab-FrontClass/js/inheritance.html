@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+
+    <h1>animals</h1>
+
+    <button id="dogBtn">dog</button>
+    <button id="catBtn">cat</button>
+
+    <p id="output"></p>
+
+
+
+
+
+    <script>
+
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+            eat() {
+                return `${this.name} is eating food`
+            }
+        }
+
+
+        class Dog extends Animal {
+            bark() {
+                return ` ${this.name} is calling you `
+            }
+        }
+
+        class Cat extends Animal {
+            meow() {
+                return ` ${this.name} is meowing`
+            }
+        }
+
+        const dogBtn = document.getElementById('dogBtn');
+        const catBtn = document.getElementById('catBtn');
+        const output = document.getElementById('output');
+
+
+
+        dogBtn.addEventListener('click', () => {
+            const myDog = new Dog('Jay');
+            output.innerHTML = ` ${myDog.eat()} <br>  ${myDog.bark()} `
+        })
+
+
+
+        catBtn.addEventListener('click', () => {
+            const myCat = new Cat('cookie');
+            output.innerHTML = ` ${myCat.eat()} <br>  ${myCat.meow()} `
+        })
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
