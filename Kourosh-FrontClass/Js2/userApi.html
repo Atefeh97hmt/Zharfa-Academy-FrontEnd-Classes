@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>users</title>
+</head>
+
+<body>
+
+
+    <style>
+        body {
+            font-family: tahoma;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px
+        }
+
+        input,
+        select {
+            padding: 7px 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px
+        }
+
+        .card {
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            box-shadow: 0 2px 6px #0001
+        }
+
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%
+        }
+
+        .name {
+            font-weight: bold
+        }
+
+        .meta {
+            font-size: 12px;
+            color: #555;
+            margin-top: 4px
+        }
+    </style>
+
+
+    <header>
+        <input id="search" placeholder="seraching name ...">
+        <select id="countrySelect">
+            <option value="all">all countries</option>
+        </select>
+    </header>
+
+    <div id="cards" class="grid"></div>
+
+
+    <script>
+
+        var users = [];
+        var searchInput = document.getElementById('search');
+        var countrySelect = document.getElementById('countrySelect');
+        var cardEl = document.getElementById('cards');
+
+        function loadUsers() {
+            fetch('https://randomuser.me/api/?results=25')
+                .then(function (res) { return res.json(); })
+                .then(function (data) {
+                    users = data.results.map(function (u) {
+                        return {
+                            name: u.name.first + ' ' + u.name.last,
+                            country: u.location.country,
+                            email: u.email,
+                            avatar: u.picture.medium
+                        };
+                    });
+                    fillCountries();
+                    render();
+                });
+        };
+
+
+        function fillCountries() {
+            var cs = users.map(function (u) { return u.country });
+            cs = cs.filter(function (v, i, a) { return a.indexOf(v) === i });
+            cs.sort();
+            countrySelect.innerHTML = '<option value = "all">all countries </option>';
+            cs.forEach(function (c) {
+                var o = document.createElement('option');
+                o.value = c;
+                o.textContent = c;
+                countrySelect.appendChild(o);
+            })
+        }
+
+        function render() {
+            var q = searchInput.value.toLowerCase();
+            var country = countrySelect.value;
+            var list = users.filter(function (u) {
+                if (country !== 'all' && u.country !== country) return false;
+                if (q && u.name.toLowerCase().indexOf(q) === -1) return false;
+                return true;
+            });
+
+
+            cardEl.innerHTML = '';
+            list.forEach(function (u) {
+                var card = document.createElement('div'); card.className = 'card'
+                card.innerHTML =
+                    '<img class="avatar" src="' + u.avatar + '" > ' +
+                    '<div>' +
+                    '<div class = "name">' + u.name + '</div>' +
+                    '<div class = "meta">' + u.country + ' <br>' + u.email + '</div>' +
+                    '</div>';
+                cardEl.appendChild(card);
+            });
+
+            if (list.length === 0) { cardEl.innerHTML = '<div>nothing founded</div>' }
+
+
+        }
+
+        searchInput.addEventListener('input', render);
+        countrySelect.addEventListener('change', render);
+
+
+        loadUsers()
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
