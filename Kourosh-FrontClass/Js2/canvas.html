@@ -1,76 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Ball</title>
+  <style>
+    body {
+      background-color: aqua;
+    }
+    canvas {
+      background-color: white;
+      display: block;
+      margin: 30px auto;
+    }
+  </style>
 </head>
 
 <body>
+  <canvas id="canvas" width="800" height="500"></canvas>
 
+  <script>
+    let canvas = document.getElementById('canvas');
+    let ctx = canvas.getContext('2d');
 
+    class Ball {
+      constructor(x, y, color, radius) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+        this.radius = radius;
+        this.target = true;
+      }
 
-    <style>
-        body {
-            background-color: aqua;
+      draw() {
+        ctx.beginPath();
+        if (this.target === true) {
+          ctx.beginPath();
+          ctx.arc(this.x - 2, this.y - 2, this.radius + 4, 0, Math.PI * 2);
+          ctx.fillStyle = '#9c9c9cff';
+          ctx.fill();
+          ctx.closePath();
         }
 
-        canvas {
-            background-color: white;
-        }
-    </style>
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.closePath();
+      }
+    }
 
-    <body>
+    let ball1 = new Ball(105, 100, '#f33636ff', 20);
 
-        <canvas id="canvas" width="800" height="500"></canvas>
+    function main() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ball1.draw();
+    }
 
-        <script>
-            let canvas = document.getElementById('canvas');
-            let ctx = canvas.getContext('2d');
-
-
-            class Ball {
-                constructor(x, y, color, radius) {
-                    this.x = x;
-                    this.y = y;
-                    this.xv = 0;
-                    this.yv = 0;
-                    this.color = color;
-                    this.radius = radius;
-                    this.target = True
-                }
-
-
-                draw() {
-                    ctx.beginPath();
-                    if (this.target === True) {
-                        ctx.beginPath();
-                        ctx.arc(this.x - 2, this.y - 2, this.radius + 4, 0, Math.PI * 2)
-                        ctx.fillStyle = '#9c9c9cff';
-                        ctx.fill();
-                        ctx.closePath();
-                    }
-
-                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI)
-                    ctx.fillStyle = this.color;
-                    ctx.fill();
-                    ctx.closePath();
-
-                }
-
-            }
-
-            let ball1 = new Ball(105, 100, '#f33636ff', 20)
-
-            function main() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ball1.draw();
-            }
-
-
-            setInterval(main, 15);
-        </script>
-    </body>
-
+    setInterval(main, 15);
+  </script>
+</body>
 </html>
