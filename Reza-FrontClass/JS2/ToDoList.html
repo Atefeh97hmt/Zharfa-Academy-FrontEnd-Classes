@@ -28,58 +28,64 @@
     <script>
 
 
-
         window.onload = function () {
-            loadTask()
-            loadSessionTasks()
+            loadTasks();
+            loadSessionTasks();
         }
-
 
         function addTask() {
-            let task = document.getElementById("taskInput").value;
-            if (task === "") return;
+            let task = document.getElementById('taskInput').value;
+            if (task === '') return;
 
-
-            let tasks = JSON.parse(localStorage.getItem("tasks") || []);
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
             tasks.push(task);
-            localStorage.setItem("tasks", JSON.stringify(tasks));
+            localStorage.setItem('tasks', JSON.stringify(tasks));
 
-
-
-            let sessionTasks = JSON.parse(sessionStorage.getItem("sessionTasks") || []);
+            let sessionTasks = JSON.parse(sessionStorage.getItem('sessionTasks')) || [];
             sessionTasks.push(task);
-            sessionStorage.setItem("sessionTasks", JSON.stringify(sessionTasks));
-            loadTask()
-            loadSessionTasks()
-            document.getElementById("taskInput").value = "";
+            sessionStorage.setItem('sessionTasks', JSON.stringify(sessionTasks));
+
+            loadTasks();
+            loadSessionTasks();
+
+            document.getElementById('taskInput').value = '';
+
         }
 
-
-
-
-        function loadTask() {
-            let tasks = JSON.parse(localStorage.getItem("tasks") || []);
-            let taskList = getElementById("taskList");
-            taskList.innerHTML = "";
+        function loadTasks() {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            let taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
             tasks.forEach((task, index) => {
-                taskList.innerHTML += ` <li>  ${task} <button onclick(${index})"> delete </button></li>  `
+                taskList.innerHTML += ` <li> ${task} <button onclick="removeTask(${index})"> delete </button></li> `
+            });
+        }
+
+        function loadSessionTasks() {
+            let sessionTasks = JSON.parse(sessionStorage.getItem('sessionTasks')) || [];
+            let sessionTaskList = document.getElementById('sessionTaskList');
+            sessionTaskList.innerHTML = '';
+            sessionTasks.forEach((task) => {
+                sessionTaskList.innerHTML += ` <li> ${task} </li>`
             });
         }
 
 
-        function loadSessionTasks() {
-            let sessionTasks = JSON.parse(sessionStorage.getItem("sessionTasks") || []);
-            let sessionTaskList = getElementById("sessionTaskList");
-            sessionTasks.innerHTML = "";
-            sessionTasks.forEach((task) => {
-                sessionTaskList.innerHTML += `<li>  ${task} </li>`
-            })
+
+
+        function removeTask(index) {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.splice(index, 1);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            loadTasks();
         }
 
-
-
-
-
+        function clearAll() {
+            localStorage.clear();
+            sessionStorage.clear();
+            loadTasks();
+            loadSessionTasks();
+        }
 
 
 
