@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage and session storage</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        localStorage.setItem("username", "Reza");
+
+        let name = localStorage.getItem("username");
+        console.log(name);
+
+        localStorage.removeItem("username");
+
+        localStorage.clear();
+
+
+
+        let user = {
+            name: "reza",
+            age: "20"
+        }
+
+        localStorage.setItem("user", JSON.stringify(user));
+        let storeUser = JSON.parse(localStorage.getItem("user"));
+
+        console.log(storeUser.name);
+        console.log(storeUser.age);
+
+
+        sessionStorage.setItem("score", "100");
+        let score = sessionStorage.getItem("score");
+        console.log(score);
+
+        sessionStorage.removeItem("score")
+        sessionStorage.clear();
+
+
+
+
+    </script>
+
+</body>
+
+</html>
