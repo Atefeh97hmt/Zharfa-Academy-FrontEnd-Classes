@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="inputText" type="text" placeholder="enter your text">
+    <button onclick="reverseSimple()">reverse</button>
+    <p> result: <span id="output"></span> </p>
+
+
+    <script>
+        function reverseSimple() {
+            const text = document.getElementById("inputText").value;
+            const reversed = text.split("").reverse().join("");
+            document.getElementById('output').textContent = reversed;
+        }
+
+        // Mahtab
+        //  [m, a, ,h ,t, a, b]
+        // [b, a, t, h, a ,m]
+        // batham
+    </script>
+
+
+
+</body>
+
+</html>
