@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+</head>
+
+<body>
+
+    <style>
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tab-btn {
+            padding: 8px 15px;
+            border: 1px solid #aaa;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .tab-btn.active {
+            background-color: #ddd;
+            font-weight: bold;
+            border-top: 3px solid #021d70;
+
+        }
+
+
+        .tab-content {
+            display: none;
+            padding: 18px;
+
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+
+
+    <h1> Simple Tab </h1>
+
+    <div class="tabs">
+        <div class="tab-btn active" onclick="showTab(0)">tab 1</div>
+        <div class="tab-btn" onclick="showTab(1)">tab 2</div>
+        <div class="tab-btn" onclick="showTab(2)">tab 3</div>
+    </div>
+
+    <div class="tab-content active"> content 1</div>
+    <div class="tab-content"> content 2</div>
+    <div class="tab-content"> content 3</div>
+
+    <script>
+        function showTab(index) {
+
+            let tabs = document.querySelectorAll(".tab-btn");
+            let contents = document.querySelectorAll(".tab-content");
+
+            tabs.forEach(tab => tab.classList.remove("active"));
+            contents.forEach(c => c.classList.remove("active"));
+
+            tabs[index].classList.add("active");
+            contents[index].classList.add("active");
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
