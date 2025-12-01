@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+</head>
+
+<body>
+
+
+    <style>
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+
+        .question {
+            font-weight: bold;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 5px;
+            color: #444;
+        }
+    </style>
+
+
+    <h2> FAQ</h2>
+
+    <div class="faq-item" onclick="toggleAnswer(0) ">
+        <div class="question"> 1 how are you? </div>
+        <div class="answer"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(1)">
+        <div class="question"> 2 how are you? </div>
+        <div class="answer"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(2)">
+        <div class="question"> 3 how are you? </div>
+        <div class="answer"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </div>
+    </div>
+    <div class="faq-item" onclick="toggleAnswer(3)">
+        <div class="question"> 4 how are you? </div>
+        <div class="answer"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </div>
+    </div>
+
+    <script>
+
+        function toggleAnswer(index) {
+            let answers = document.querySelectorAll('.answer');
+            let answer = answers[index];
+
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block"
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
