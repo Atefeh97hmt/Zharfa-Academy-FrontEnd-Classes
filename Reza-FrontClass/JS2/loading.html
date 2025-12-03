@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #loading {
+            font-size: 25px;
+            animation: blink 1s infinite;
+        }
+
+
+        .dot {
+            animation: blink 1s infinite;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+
+
+
+        @keyframes blink {
+
+            0%,
+            20% {
+                opacity: 0;
+            }
+
+            50%,
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+
+
+
+        #content {
+            display: none;
+        }
+    </style>
+
+
+
+    <div id="loading">
+        loading <span class="dot">.</span> <span class="dot">.</span> <span class="dot">.</span>
+    </div>
+
+
+    <div id="content">
+        <h2>hi this is our content</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi dignissimos accusantium quaerat fuga! Repellat
+            inventore ipsam optio error voluptas corrupti autem quaerat dolores. Cum illum corporis corrupti ullam
+            assumenda ex.</p>
+    </div>
+
+
+
+
+
+    <script>
+
+
+        setTimeout(() => {
+
+            document.getElementById('loading').style.display = "none"
+            document.getElementById("content").style.display = "block"
+
+        }, 5000)
+
+
+
+    </script>
+
+</body>
+
+</html>
