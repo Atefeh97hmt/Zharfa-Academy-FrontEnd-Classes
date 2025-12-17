@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+
+<body>
+
+
+    <header>
+
+
+        <input id="serach" placeholder="searching name ...">
+        <select id="countrySelect">
+            <option value="all">all countries</option>
+        </select>
+
+        <div id="cards" class="grid"></div>
+
+
+    </header>
+
+
+
+
+    <script>
+
+        var users = [];
+        var searchInput = document.getElementById('search');
+        var countrySelect = document.getElementById('countrySelect');
+        var cardEl = document.getElementById('cards');
+
+
+        function loadUsers() {
+            fetch('https://randomuser.me/api/?results=25')
+                .then(function (res) { return res.json(); })
+                .then(function (data) {
+                    users = data.results.map(function (u) {
+                        return {
+                            name: u.name.first + '' + u.name.last,
+                            country: u.location.country,
+                            email: u.email,
+                            avatar: u.picture.medium
+                        }
+                    })
+
+
+                })
+        }
+
+        function fillCountries() {
+
+            var cs = users.map(function (u) { return u.country });
+            cs = cs.filter(function (v, i, a) { return a.indexOf(v) === i });
+            cs.sort();
+            cs.forEach(function (c) {
+                var o = document.createElement('option');
+                o.value = c;
+                o.textContent = c;
+                countrySelect.appendChild(o);
+            })
+
+        }
+
+        function render() {
+            var q = searchInput.value.toLowerCase();
+            var country = countrySelect.value;
+            var list = users.filter(function (u) {
+                if (country !== 'all' && u.country !== country) return false;
+                if (q && u.name.toLowerCase().indexOf(q) === -1) return false;
+                return true;
+            })
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
