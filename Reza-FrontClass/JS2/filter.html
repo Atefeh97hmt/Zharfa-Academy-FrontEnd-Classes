@@ -10,19 +10,44 @@
 <body>
 
 
+
+    <style>
+        body {
+            background-color: #f5f5f5f5;
+            margin: 0;
+            padding: 20PX;
+        }
+
+        .grid {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+          
+        }
+
+
+        .card{
+              background-color: #fff;
+            padding: 7px 10px;
+            border-radius: 10px;
+        }
+    </style>
+
+
+
+
+
+
     <header>
-
-
-        <input id="serach" placeholder="searching name ...">
+        <input id="search" placeholder="seraching name ...">
         <select id="countrySelect">
             <option value="all">all countries</option>
         </select>
-
-        <div id="cards" class="grid"></div>
-
-
     </header>
 
+    <div id="cards" class="grid"></div>
 
 
 
@@ -33,36 +58,35 @@
         var countrySelect = document.getElementById('countrySelect');
         var cardEl = document.getElementById('cards');
 
-
         function loadUsers() {
             fetch('https://randomuser.me/api/?results=25')
                 .then(function (res) { return res.json(); })
                 .then(function (data) {
                     users = data.results.map(function (u) {
                         return {
-                            name: u.name.first + '' + u.name.last,
+                            name: u.name.first + ' ' + u.name.last,
                             country: u.location.country,
                             email: u.email,
                             avatar: u.picture.medium
-                        }
-                    })
+                        };
+                    });
+                    fillCountries();
+                    render();
+                });
+        };
 
-
-                })
-        }
 
         function fillCountries() {
-
             var cs = users.map(function (u) { return u.country });
             cs = cs.filter(function (v, i, a) { return a.indexOf(v) === i });
             cs.sort();
+            countrySelect.innerHTML = '<option value = "all">all countries </option>';
             cs.forEach(function (c) {
                 var o = document.createElement('option');
                 o.value = c;
                 o.textContent = c;
                 countrySelect.appendChild(o);
             })
-
         }
 
         function render() {
@@ -72,16 +96,32 @@
                 if (country !== 'all' && u.country !== country) return false;
                 if (q && u.name.toLowerCase().indexOf(q) === -1) return false;
                 return true;
-            })
+            });
+
+            cardEl.innerHTML = ""
+            list.forEach(function (u) {
+                var card = document.createElement('div'); card.classList = 'card'
+
+                card.innerHTML =
+
+                    ' <img class = "avatar" src= "' + u.avatar + '" >  ' + '<div>' + '<div class = "name" ' + u.name + '</div>' +
+                    '<div class= "meta">' + u.country + '<br>' + u.email + '</div>' +
+                    '</div>';
+                cardEl.appendChild(card);
+            });
+
+            if (list.length === 0) {
+                cardEl.innerHTML = "<div>  nothing founded !  </div>"
+            }
+
         }
 
 
+        searchInput.addEventListener('input', render);
+        countrySelect.addEventListener('change', render);
 
-
-
-
+        loadUsers()
     </script>
-
 
 
 
