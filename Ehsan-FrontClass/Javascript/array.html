@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <script>
+
+        let student1 = "ali";
+        let student2 = "sara";
+        let student3 = "reza";
+
+        //index
+        let students = ["ali", "sara", "reza"];
+
+        console.log(students);
+
+
+
+        let colors = ['red', 'blue', 'green', 'black'];
+
+        console.log(colors);
+        console.log(colors[2]);
+        console.log(colors[0]);
+
+
+
+
+        let fruits = ['apple', "banana", "orange"];
+        //let fruits = new Array ("apple", "banana", "orange");
+
+
+        let numbers = [10, 20, 30, 40, 50, 52];
+        console.log(numbers);
+        numbers[1] = 102;
+        console.log(numbers);
+        numbers[4] = 12;
+        console.log(numbers);
+
+
+        let animals = ['cat', 'dog', 'lion'];
+        console.log(animals.length);
+
+
+        let cities = ['tehran', 'shiraz', 'rasht'];
+        console.log(cities);
+
+        cities.push('tabriz');
+        console.log(cities);
+
+        cities.push('mazandaran');
+        console.log(cities);
+
+        cities.unshift('ahvaz');
+        console.log(cities);
+
+        cities.unshift('mashhad');
+        console.log(cities);
+
+
+
+
+        let scores = [10, 15, 16, 12, 20];
+        scores.pop();
+        console.log(scores);
+
+        scores.pop();
+        console.log(scores);
+        scores.pop();
+        console.log(scores);
+
+
+
+        scores.shift();
+        console.log(scores)
+
+
+
+        let mixed = ["ali", 25, true, 62, "sara"];
+        console.log(mixed[1])
+
+
+
+        let numbers2 = [10, 20, 30];
+        console.log(numbers2.indexOf(20));
+        console.log(numbers2.indexOf(100));
+
+
+
+        let names = ['ali', 'ehsan', 'reza'];
+        console.log(names.includes('ali'))
+        console.log(names.includes('sara'))
+
+
+
+
+        let nums = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        for (let n of nums) {
+            if (n % 2 === 0) {
+                console.log(n);
+            }
+        }
+
+
+
+        let grades = [15, 18, 20];
+        let sum = 0;
+
+        for (let g of grades) {
+           // sum = g + sum;
+            sum += g;
+        }
+        console.log(sum);
+
+    </script>
+
+
+
+</body>
+
+</html>
