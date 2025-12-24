@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG</title>
+</head>
+
+<body>
+
+
+    <style>
+        .red {
+            background: red;
+        }
+
+        .blue {
+            background: blue;
+
+        }
+
+        .green {
+            background: green;
+        }
+
+        .orange {
+            background: orange;
+        }
+    </style>
+
+
+    <svg id="mySvg" width="240" height="140" viewBox=" 0 0 240 140">
+
+
+        <rect id="mainShape" x="20" ; y="20" ; width="200" height="100" rx="20" fill="steelblue" />
+    </svg>
+
+
+    <div class="colors">
+        <button class="red" data-color="red">red</button>
+        <button class="blue" data-color="blue">blue</button>
+        <button class="green" data-color="green">green</button>
+        <button class="orange" data-color="orange">orange</button>
+    </div>
+
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17" fill="none">
+        <path d="M17.8494 6.4102C18.9614 7.7244 18.7301 9.3315 18.7302 10.75C18.7302 14.6562 13.4633 15.75 10.7501 15.75C8.03686 15.75 2.77003 14.6562 2.77003 10.75C2.77004 9.3315 2.53884 7.7244 3.65075 6.4102M17.8494 6.4102C17.6549 6.1803 17.4193 5.9594 17.1341 5.75M17.8494 6.4102C18.5494 6.8134 18.7282 5.30469 18.7302 4.8125V2.93761C18.7302 1.31261 17.613 0.75011 16.6554 0.75011C15.6978 0.75011 13.7825 2.3125 13.1441 2.3125C12.378 2.3125 12.2305 2.15636 10.7501 2.15636C9.26979 2.15636 9.12219 2.3125 8.3561 2.3125C7.71769 2.3125 5.80245 0.75 4.84485 0.75C3.88724 0.75 2.77004 1.3125 2.77004 2.9375V4.8125C2.77197 5.30469 2.95081 6.8134 3.65075 6.4102M3.65075 6.4102C3.84528 6.1803 4.08091 5.9594 4.36608 5.75" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M11.5759 11.75C11.5759 11.9226 11.2148 12.0625 10.7694 12.0625C10.3241 12.0625 9.96299 11.9226 9.96299 11.75C9.96299 11.5774 10.3241 11.4375 10.7694 11.4375C11.2148 11.4375 11.5759 11.5774 11.5759 11.75Z" stroke="#1C274C" stroke-width="1.5"/>
+        <path d="M14.2501 9.3438C14.2501 9.7752 14.0335 10.125 13.7662 10.125C13.499 10.125 13.2824 9.7752 13.2824 9.3438C13.2824 8.9123 13.499 8.5625 13.7662 8.5625C14.0335 8.5625 14.2501 8.9123 14.2501 9.3438Z" stroke="#1C274C" stroke-width="1.5"/>
+        <path d="M8.25009 9.3438C8.25009 9.7752 8.03345 10.125 7.76622 10.125C7.49898 10.125 7.28235 9.7752 7.28235 9.3438C7.28235 8.9123 7.49898 8.5625 7.76622 8.5625C8.03345 8.5625 8.25009 8.9123 8.25009 9.3438Z" stroke="#1C274C" stroke-width="1.5"/>
+        <path d="M20.7505 11.2188C20.2666 10.9062 18.1698 10.125 17.3634 10.125" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M19.1372 13.7188C18.6534 13.4062 17.5243 12.625 16.7179 12.625" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M0.75009 11.2188C1.23396 10.9062 3.33074 10.125 4.13719 10.125" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M2.36288 13.7188C2.84676 13.4062 3.97579 12.625 4.78224 12.625" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M13.0548 4.31843L12.5202 3.75L10.2359 6.17784L9.2847 5.16739L8.75009 5.73583L10.2359 7.31563L13.0548 4.31843Z" fill="black"/>
+        </svg>
+
+    <script>
+        const shape = document.getElementById('mainShape');
+        const buttons = document.querySelectorAll(".colors button")
+
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+
+                const color = button.dataset.color;
+                shape.setAttribute("fill", color)
+            })
+        })
+
+
+    </script>
+
+</body>
+
+</html>
