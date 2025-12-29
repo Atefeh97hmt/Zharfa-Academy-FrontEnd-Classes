@@ -80,12 +80,70 @@
 
         <label>
             <input placeholder="password" type="password" id="password" name="password">
+            <span class="toggle-passwoed" onclick="togglePassword('password')">
+                <svg width="20" height="20" fill="#000000" viewBox="0 0 32 32" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <title>eye</title>
+                        <path
+                            d="M0 16q0.064 0.128 0.16 0.352t0.48 0.928 0.832 1.344 1.248 1.536 1.664 1.696 2.144 1.568 2.624 1.344 3.136 0.896 3.712 0.352 3.712-0.352 3.168-0.928 2.592-1.312 2.144-1.6 1.664-1.632 1.248-1.6 0.832-1.312 0.48-0.928l0.16-0.352q-0.032-0.128-0.16-0.352t-0.48-0.896-0.832-1.344-1.248-1.568-1.664-1.664-2.144-1.568-2.624-1.344-3.136-0.896-3.712-0.352-3.712 0.352-3.168 0.896-2.592 1.344-2.144 1.568-1.664 1.664-1.248 1.568-0.832 1.344-0.48 0.928zM10.016 16q0-2.464 1.728-4.224t4.256-1.76 4.256 1.76 1.76 4.224-1.76 4.256-4.256 1.76-4.256-1.76-1.728-4.256zM12 16q0 1.664 1.184 2.848t2.816 1.152 2.816-1.152 1.184-2.848-1.184-2.816-2.816-1.184-2.816 1.184l2.816 2.816h-4z">
+                        </path>
+                    </g>
+                </svg>
+            </span>
             <span class="error" id="passwordError"></span>
         </label>
 
 
 
+        <label>
+            <input placeholder="comfirm password" type="password" id="comfirmPassword">
+            <span class="toggle-passwoed" onclick="togglePassword('comfirmPassword')">
+                <svg width="20" height="20" fill="#000000" viewBox="0 0 32 32" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <title>eye</title>
+                        <path
+                            d="M0 16q0.064 0.128 0.16 0.352t0.48 0.928 0.832 1.344 1.248 1.536 1.664 1.696 2.144 1.568 2.624 1.344 3.136 0.896 3.712 0.352 3.712-0.352 3.168-0.928 2.592-1.312 2.144-1.6 1.664-1.632 1.248-1.6 0.832-1.312 0.48-0.928l0.16-0.352q-0.032-0.128-0.16-0.352t-0.48-0.896-0.832-1.344-1.248-1.568-1.664-1.664-2.144-1.568-2.624-1.344-3.136-0.896-3.712-0.352-3.712 0.352-3.168 0.896-2.592 1.344-2.144 1.568-1.664 1.664-1.248 1.568-0.832 1.344-0.48 0.928zM10.016 16q0-2.464 1.728-4.224t4.256-1.76 4.256 1.76 1.76 4.224-1.76 4.256-4.256 1.76-4.256-1.76-1.728-4.256zM12 16q0 1.664 1.184 2.848t2.816 1.152 2.816-1.152 1.184-2.848-1.184-2.816-2.816-1.184-2.816 1.184l2.816 2.816h-4z">
+                        </path>
+                    </g>
+                </svg>
+            </span>
+            <span class="error" id="comfirmPasswordError"></span>
+        </label>
+
+
+
+
+        <label>
+            <input placeholder="age" type="number" id="age">
+            <span class="error" id="ageError"></span>
+        </label>
+
+
+        <label>
+            <input type="checkbox" id="terms">
+            accept terms
+
+            <span class="error" id="termsError"></span>
+
+        </label>
+
+
         <button type="submit">submit</button>
+
+
+
+
+
+
+
+
+
 
     </form>
 
@@ -101,6 +159,9 @@
             document.getElementById('emailError').textContent = '';
             document.getElementById('phoneError').textContent = '';
             document.getElementById('passwordError').textContent = '';
+            document.getElementById('comfirmPasswordError').textContent = '';
+            document.getElementById('ageError').textContent = '';
+            document.getElementById('termsError').textContent = '';
 
 
 
@@ -111,6 +172,9 @@
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const password = document.getElementById('password').value;
+            const comfirmPassword = document.getElementById('comfirmPassword').value;
+            const age = document.getElementById('age').value;
+            const terms = document.getElementById('terms').checked;
 
 
 
@@ -145,10 +209,39 @@
             }
 
 
+            if (password !== comfirmPassword) {
+                document.getElementById("comfirmPasswordError").textContent = "password do not match";
+                isValid = false;
+
+            }
+
+            if (age < 18 || age > 60) {
+                document.getElementById("ageError").textContent = "age must be between 18 and 60";
+                isValid = false;
+
+            }
+
+            if (!terms) {
+                document.getElementById('termsError').textContent = "you must accept the terms";
+                isValid = false;
+
+            }
+
             return isValid;
         }
 
+        function togglePassword(id) {
+            const input = document.getElementById(id);
 
+            //    if (input.type === "password") {
+            //       input.type = "text";
+            //    } else {
+            //        input.type = "password"
+            //    }
+
+            input.type = input.type === "password" ? "text" : "password";
+
+        }
 
 
     </script>
