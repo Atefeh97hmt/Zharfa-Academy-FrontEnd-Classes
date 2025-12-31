@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto search</title>
+</head>
+
+<body>
+
+
+
+    <style>
+        input {
+            padding: 8px;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px 0;
+        }
+    </style>
+
+    <h2> auto search</h2>
+    <input type="text" id="search" placeholder="serach sth">
+
+    <ul id="list">
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+        <li>kiwi</li>
+        <li>narengi</li>
+    </ul>
+
+
+
+
+    <script>
+        const serachInput = document.getElementById("search");
+        const listItem = document.querySelectorAll('#list li')
+
+        serachInput.addEventListener('input', function () {
+            const query = this.value.toLowerCase();
+            listItem.forEach((item) => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none"
+                }
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
