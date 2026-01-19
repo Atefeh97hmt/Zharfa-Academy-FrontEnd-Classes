@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autosearch list</title>
+</head>
+
+<body>
+
+
+
+    <h1> auto search </h1>
+
+    <input type="text" id="search" placeholder="search something">
+
+    <ul id="list">
+
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+        <li>kiwi</li>
+        <li>pine apple</li>
+        <li>berry</li>
+
+    </ul>
+
+
+    <script>
+
+        const searchInput = document.getElementById("search");
+        const listItem = document.querySelectorAll("#list li");
+
+        searchInput.addEventListener('input', function () {
+            const query = this.value.toLowerCase();
+            listItem.forEach((item) => {
+                const text = item.textContent.toLowerCase();
+
+                if (text.includes(query)) {
+                    item.style.display = ""
+                } else {
+                    item.style.display = "none"
+                }
+
+            })
+        })
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
