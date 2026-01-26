@@ -9,14 +9,13 @@
 
 <body>
 
-
     <style>
-
-        body{
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         button {
             padding: 10px 30px;
             background-color: #007bff;
@@ -31,7 +30,6 @@
             transform: scale(1.1);
             transition: 0.5s;
         }
-
 
         #quote-box {
 
@@ -49,7 +47,6 @@
         <p id="author"></p>
         <button id="new-quote">new one</button>
     </div>
-
 
 
     <script>
@@ -79,27 +76,18 @@
 
         ]
 
-
-
-
         let qouteText = document.getElementById("quote")
         let qouteAuthor = document.getElementById("author")
         let newQouteBtn = document.getElementById("new-quote")
-
-
 
         function generateQuote() {
 
             let randomIndex = Math.floor(Math.random() * quotes.length);
             let randomQoute = quotes[randomIndex]
 
-
             qouteText.textContent = randomQoute.text;
             qouteAuthor.textContent = "-" + randomQoute.author;
-
-
         }
-
 
         newQouteBtn.addEventListener("click", generateQuote);
 
