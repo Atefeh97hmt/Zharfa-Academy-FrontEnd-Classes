@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car api</title>
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://zharfa.org/images/new_artbord1.png">
+</head>
+
+<body>
+
+
+
+<style>
+    img{
+        width: 500px;
+        height:500px;
+        margin-top: 10px;
+    }
+</style>
+
+
+    <h1>cat api</h1>
+    <button id="btn">show cat</button>
+
+    <div id="result"></div>
+
+
+
+
+    <script>
+
+        let btn = document.getElementById('btn');
+        let result = document.getElementById('result')
+
+
+        btn.addEventListener('click', () => {
+
+            result.innerHTML = '<p>  loading ...   </p>'
+
+
+            fetch('https://api.thecatapi.com/v1/images/search')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    let imgUrl = data[0].url;
+                    result.innerHTML = '<img src="' + imgUrl + '"alt = "cat image">'
+                })
+
+                .catch(function () {
+                    result.innerHTML = '<p style = "color:red;">  error in loading the image   </p>'
+                })
+
+        })
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
