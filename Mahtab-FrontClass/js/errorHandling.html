@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // try {
+        //     //the code that we think will cause error
+        // }
+
+        // catch (error)  {
+        //     //when error occur this part will run
+        // }
+
+
+
+        // console.log("start");
+        // JSON.parse('test');
+        // console.log("end")
+
+
+        console.log("start");
+        try {
+            JSON.parse("test")
+        } catch (error) {
+            console.log("invalid json")
+        }
+
+        console.log("end")
+
+
+
+        try {
+            JSON.parse("invalid json")
+        }
+        catch (error) {
+            console.log(error.name);
+            console.log(error.message);
+            console.log(error.stack)
+        }
+
+
+        // try {
+
+        // } catch (error){
+
+        // }
+
+        // finally{
+
+        // }
+
+
+    </script>
+
+
+</body>
+
+</html>
