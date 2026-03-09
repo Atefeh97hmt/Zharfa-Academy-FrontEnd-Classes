@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Length Calcuator</title>
+</head>
+
+
+
+<body>
+
+<style>
+    body{
+    background-color:#FA8072;
+    text-align: center;
+}
+
+input{
+    margin: 100px auto 100px;
+    /* margin-left: 220px; */
+    width: 350px;
+    height: 40px;
+    display: block;
+    text-align: center;
+}
+
+#output{
+    margin-top: 45px;
+    width: 100px;
+    background: lightgreen;
+    margin: 100px auto 100px;
+
+}
+
+#btn{
+    width: 350px;
+    height: 80px;
+    color: #fff;
+    background-color:blue;
+    border-style: none;
+    border-radius: 15px;
+    margin-top: 100px;
+    /* margin-left: 385px; */
+}
+
+h1{
+    
+    color: #000;
+    margin-top: 50px;
+}
+</style>
+
+
+    <h1>متن مد نظر را اینجا بنویسید</h1>
+    <input type="text" id="str">
+    <div id="output"></div>
+    <button id="btn"><h2>برای محاسبه طول کلمات اینجا کلیک کنید</h2></button>
+    <script>
+
+let button = document.getElementById('btn');
+
+button.addEventListener('click', function(){
+    let word = document.getElementById('str').value;
+    let count = word.length;
+    let outputDiv = document.getElementById('output');
+
+    outputDiv.innerHTML = `<h1>${count}</h1>`
+});
+
+    </script>
+</body>
+</html>

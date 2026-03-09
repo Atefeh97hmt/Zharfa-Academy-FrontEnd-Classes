@@ -1,0 +1,35 @@
+.button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+#grey {
+    background: grey;
+}
+
+#Purple {
+    background: purple;
+}
+
+#blue {
+    background: blue;
+}
+
+#yellow {
+    background: yellow;
+}
+
+
+
+.canvas{
+    width: 80%;
+    margin: 100px;
+    text-align: center;
+}
+
+span{
+    display: block;
+}

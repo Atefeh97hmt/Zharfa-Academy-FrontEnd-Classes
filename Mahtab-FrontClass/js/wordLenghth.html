@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word length</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-color: #FA8072;
+            text-align: center;
+        }
+
+        input {
+            width: 350px;
+            height: 40px;
+            margin: 10px auto 10px;
+            border-radius: 4px;
+        }
+
+
+        #btn {
+
+            border-radius: 10px;
+            background-color: red;
+            color: #c3c3c3;
+            border: none;
+
+        }
+
+
+        #btn:hover {
+            background-color: #c90101;
+            transition: 0.2s;
+        }
+    </style>
+
+    <h1> please enter your text </h1>
+    <input type="text" id="str">
+    <div id="output"></div>
+    <button id="btn">
+        <h2>click to calculate</h2>
+    </button>
+
+
+    <script>
+        let button = document.getElementById('btn');
+
+        button.addEventListener('click', function () {
+
+            let word = document.getElementById('str').value;
+            let count = word.length;
+            let outputDiv = document.getElementById('output');
+
+            outputDiv.innerHTML = `<h2>  ${count}  </h2> `
+
+        })
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

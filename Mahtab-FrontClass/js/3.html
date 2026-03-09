@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>Weather App</title>
+</head>
+<body>
+
+<input type="text" id="city" placeholder="نام شهر">
+<button onclick="getWeather()">دریافت</button>
+<div id="output"></div>
+
+<script>
+function getWeather() {
+  const city = document.getElementById("city").value;
+  const output = document.getElementById("output");
+
+  output.innerHTML = "";
+
+  if (!city) {
+    output.innerHTML = "لطفاً نام شهر را وارد کنید";
+    return;
+  }
+
+  // 1️⃣ گرفتن مختصات شهر
+  fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`)
+    .then(function(response) {
+
+      if (!response.ok) {
+        throw new Error("خطا در دریافت مختصات شهر");
+      }
+
+      return response.json();
+    })
+    .then(function(geoData) {
+
+      if (!geoData.results) {
+        throw new Error("شهر پیدا نشد");
+      }
+
+      const latitude = geoData.results[0].latitude;
+      const longitude = geoData.results[0].longitude;
+
+      // 2️⃣ گرفتن آب‌وهوا
+      return fetch(
+        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
+      );
+    })
+    .then(function(weatherResponse) {
+
+      if (!weatherResponse.ok) {
+        throw new Error("خطا در دریافت اطلاعات آب‌وهوا");
+      }
+
+      return weatherResponse.json();
+    })
+    .then(function(weatherData) {
+
+      const temp = weatherData.current_weather.temperature;
+
+      output.innerHTML = "دمای فعلی: " + temp + "°C";
+
+    })
+    .catch(function(error) {
+      output.innerHTML = error.message;
+    });
+}
+</script>
+
+</body>
+</html>
